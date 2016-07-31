@@ -2,7 +2,7 @@
 
 To install Endless Bureaucracy on Windows, download endless-bureaucracy-win64-0.9.2.zip, extract it, then run EndlessSky.exe.
 
-To install Endless Bureaucracy on OSX, download and run endless-bureaucracy-macosx-0.9.2.dmg.
+To install Endless Bureaucracy on OSX, visit [The OSX repository](https://github.com/EndlessBureaucracy/endless-bureaucracy-osx)
 
 To install Endless Bureaucracy on Ubuntu, open a terminal, navigate to the endless-bureaucracy folder and enter './install'. To play it, enter './endless-bureaucracy'.
 

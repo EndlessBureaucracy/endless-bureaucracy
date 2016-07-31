@@ -1,4 +1,4 @@
-# endless-sky
+# endless-bureaucracy
 
 To install Endless Bureaucracy, run the script named install.
 

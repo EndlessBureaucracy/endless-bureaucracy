@@ -10,8 +10,8 @@
 
 start
 	date 16 11 3013
-	system "Rutilicus"
-	planet "New Boston"
+	system "Melbourne City Council"
+	planet "Carlton"
 	account
 		credits 480000
 		score 400

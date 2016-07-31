@@ -10,7 +10,7 @@
 
 mission "FW Epilogue: Ijs and Katya"
 	landing
-	source Winter
+	source Goorambat
 	to offer
 		has "free worlds plot completed"
 	
@@ -54,13 +54,13 @@ mission "FW Epilogue: Ijs and Katya"
 
 mission "FW Epilogue: Alondo"
 	landing
-	source Bourne
+	source Anglers Rest
 	to offer
 		has "free worlds plot completed"
 	
 	on offer
 		conversation
-			`As you're coming in for a landing on Bourne, you receive a message from Alondo. "<first>!" he says. "I just heard that you were in system. Want to meet up for a drink and talk about old times?"`
+			`As you're coming in for a landing on Anglers Rest, you receive a message from Alondo. "<first>!" he says. "I just heard that you were in system. Want to meet up for a drink and talk about old times?"`
 			choice
 				`	"Sure, I'd be glad to."`
 				`	"Sorry, I'm busy right now."`
@@ -91,7 +91,7 @@ mission "FW Epilogue: Alondo"
 
 mission "FW Epilogue: Freya"
 	landing
-	source Pugglemug
+	source Devenish
 	to offer
 		has "free worlds plot completed"
 	
@@ -142,7 +142,7 @@ mission "FW Epilogue: Freya"
 
 mission "FW Epilogue: Danforth"
 	landing
-	source Farpoint
+	source Acheron
 	to offer
 		has "free worlds plot completed"
 		not "Wanderers: Alpha Surveillance E: offered"

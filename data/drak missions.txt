@@ -14,28 +14,28 @@ mission "Drak guarding Korath space"
 	npc kill
 		government Drak
 		personality heroic vindictive staying
-		system Fasitopfar
+		system Corangamite Shire Council
 		ship "Archon" "Kasiliri's Folly"
 	npc kill
 		government Drak
 		personality heroic vindictive staying
-		system Kasikfar
+		system Nillumbik Shire Council
 		ship "Archon" "Sword of Eden"
 	npc kill
 		government Drak
 		personality heroic vindictive staying
-		system Peresedersi
+		system Indigo Shire Council
 		ship "Archon" "Snows of Far Door Nai"
 
-mission "Drak guarding Sayaiban"
+mission "Drak guarding Surf Coast Shire Council"
 	invisible
 	landing
 	npc kill
 		government Drak
 		personality heroic vindictive staying
-		system Sayaiban
+		system Surf Coast Shire Council
 		ship "Archon" "Watchful Gravetender"
-	on enter Sayaiban
+	on enter Surf Coast Shire Council
 		conversation
 			`A voice says, "This system is off limits. You should leave."`
 			`	After a second, you realize that the voice did not come from your communications equipment. In fact, now that you think about it, you're not sure if it was an audible voice, or just something in your head.`

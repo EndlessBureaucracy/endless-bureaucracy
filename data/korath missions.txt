@@ -8,33 +8,33 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-mission "First Contact: Korati Efreti"
+mission "First Contact: Springvale"
 	landing
-	source "Korati Efreti"
+	source "Springvale"
 	on offer
 		conversation
 			`	A few of the Korath who inhabit this station greet you when you land, holding up both hands with their palms toward you. One of them says something that sounds like, "Humani efreti, naskoor amasavarkta." It's clear that none of them speak your language, but they seem friendly and willing to trade with you.`
 				decline
 
-mission "First Contact: Laki Nemparu"
+mission "First Contact: Campbellfield"
 	landing
-	source "Laki Nemparu"
+	source "Campbellfield"
 	on offer
 		conversation
 			`	A few of the Korath in this spaceport greet you when you land, holding up both hands with their palms toward you. One of them says something that sounds like, "Humani efreti, naskoor amasavarkta." It's clear that none of them speak your language, but they seem friendly and willing to trade with you.`
 				decline
 
-mission "First Contact: Karek Fornati"
+mission "First Contact: Caulfield"
 	landing
-	source "Karek Fornati"
+	source "Caulfield"
 	on offer
 		conversation
 			`	A few of the Korath in this spaceport greet you when you land, holding up both hands with their palms toward you. One of them says something that sounds like, "Humani efreti, naskoor amasavarkta." It's clear that none of them speak your language, but they seem friendly and willing to trade with you.`
 				decline
 
-mission "First Contact: Setar Fort"
+mission "First Contact: Jeparit"
 	landing
-	source "Setar Fort"
+	source "Jeparit"
 	on offer
 		conversation
 			`	A few of the Korath in this spaceport greet you when you land, holding up both hands with their palms toward you. One of them says something that sounds like, "Humani efreti, naskoor amasavarkta." It's clear that none of them speak your language, but they seem friendly and willing to trade with you.`

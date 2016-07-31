@@ -11,10 +11,10 @@
 
 
 mission "FW Conservatory 1"
-	name "Take Ijs to Winter"
+	name "Take Ijs to Goorambat"
 	description "Transport Mr. Eyes and the Andersons to <destination>, where he will be helping to set up a public university."
-	source Bourne
-	destination Winter
+	source Anglers Rest
+	destination Goorambat
 	to offer
 		has "FW Senate 1B: done"
 		not "fw conservatory founded"
@@ -25,11 +25,11 @@ mission "FW Conservatory 1"
 				not "FW Katya 1: done"
  
 			label "met andersons"
-			`When you meet Ijs in the spaceport, he has Lynn and Henry Anderson with him, the friends of Katya who you transported from Glory months ago. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community center for our use."`
+			`When you meet Ijs in the spaceport, he has Lynn and Henry Anderson with him, the friends of Katya who you transported from Laverton months ago. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Goorambat has offered a community center for our use."`
 				goto continue
 
 			label "not met andersons"
-			`When you meet Ijs in the spaceport, he has a man and a woman with him which he introduces as Lynn and Henry Anderson. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community center for our use."`
+			`When you meet Ijs in the spaceport, he has a man and a woman with him which he introduces as Lynn and Henry Anderson. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Goorambat has offered a community center for our use."`
 				goto continue
 
 			label continue
@@ -48,21 +48,21 @@ mission "FW Conservatory 1"
 	
 	on complete
 		payment 50000
-		dialog `Ijs thanks you for the lift and gives you a credit chip for <payment>. He says, "Next we need to pick up some equipment from Tarazed Corporation. Meet me in the spaceport if you're willing to help out as an escort."`
+		dialog `Ijs thanks you for the lift and gives you a credit chip for <payment>. He says, "Next we need to pick up some equipment from Central Goldfields Shire Council Corporation. Meet me in the spaceport if you're willing to help out as an escort."`
 
 
 
 mission "FW Conservatory 2"
-	name "Escort to Wayfarer"
-	description "Escort this Free Worlds convoy to Wayfarer, to trade for terraforming equipment provided by Tarazed and the Syndicate."
-	source Winter
-	destination Wayfarer
+	name "Escort to Darnum"
+	description "Escort this Free Worlds convoy to Darnum, to trade for terraforming equipment provided by Central Goldfields Shire Council and the Syndicate."
+	source Goorambat
+	destination Darnum
 	to offer
 		has "FW Conservatory 1: done"
 	
 	on offer
 		conversation
-			`In the spaceport, it does not take long to locate Ijs; he is supervising a crew that is loading trade goods onto several Free Worlds ships. "Glad to see you, <first>," he says. "These three ships need to get to Tarazed and back without being destroyed by pirates... or by the Republic. Think you can tag along and protect them?"`
+			`In the spaceport, it does not take long to locate Ijs; he is supervising a crew that is loading trade goods onto several Free Worlds ships. "Glad to see you, <first>," he says. "These three ships need to get to Central Goldfields Shire Council and back without being destroyed by pirates... or by the Republic. Think you can tag along and protect them?"`
 			choice
 				`	"Sure thing!"`
 					accept
@@ -83,7 +83,7 @@ mission "FW Conservatory 2"
 	npc
 		government Pirate
 		personality plunders
-		system Tarazed
+		system Central Goldfields Shire Council
 		fleet "Small Southern Pirates"
 		fleet "Large Southern Pirates"
 
@@ -91,16 +91,16 @@ mission "FW Conservatory 2"
 
 mission "FW Conservatory 2B"
 	landing
-	name "Escort to Winter"
-	description "Escort this Free Worlds convoy of terraforming equipment back to Winter."
-	source Wayfarer
-	destination Winter
+	name "Escort to Goorambat"
+	description "Escort this Free Worlds convoy of terraforming equipment back to Goorambat."
+	source Darnum
+	destination Goorambat
 	to offer
 		has "FW Conservatory 2: done"
 	
 	on offer
 		conversation
-			`Your three escorts land safely on Tarazed. Their cargo is quickly offloaded and exchanged for the terraforming equipment that the Conservatory needs.`
+			`Your three escorts land safely on Central Goldfields Shire Council. Their cargo is quickly offloaded and exchanged for the terraforming equipment that the Conservatory needs.`
 				accept
 	
 	npc accompany save
@@ -116,7 +116,7 @@ mission "FW Conservatory 2B"
 	npc
 		government Pirate
 		personality plunders
-		system "Yed Prior"
+		system "Knox City Council"
 		fleet "Small Southern Pirates"
 		fleet "Small Southern Pirates"
 		fleet "Large Southern Pirates"
@@ -125,7 +125,7 @@ mission "FW Conservatory 2B"
 	npc
 		government Pirate
 		personality plunders
-		system "Pherkad"
+		system "Macedon Ranges Shire Council"
 		fleet "Small Southern Pirates"
 		fleet "Small Southern Pirates"
 		fleet "Large Southern Pirates"
@@ -143,7 +143,7 @@ mission "FW Conservatory 2B"
 			`	"Glad to hear it," he says.`
 				goto next
 			label lucky
-			`	"That's too bad," he says. "This war must be making the Dirt Belt even more unstable than usual. Hopefully we'll be able to do something about that soon."`
+			`	"That's too bad," he says. "This war must be making the Dirt Belt even more unstable than usual. Hallamfully we'll be able to do something about that soon."`
 			label next
 			`	"Is there anything else you need me to do?" you ask.`
 			`	"Not at the moment," he says. "I'll send you a message when we do. Thanks for your help, and if you hear any more news about Katya, please let me know."`
@@ -153,8 +153,8 @@ mission "FW Conservatory 2B"
 
 mission "FW Wolf Pack 1"
 	name "Ramscoop Technology"
-	description "Travel to <planet> in the Deep, where Free Worlds sympathizers will share details of a new ramscoop technology. (You may have to bribe planets along the way to get permission to refuel.)"
-	destination Memory
+	description "Travel to <planet> in the Ringwood North, where Free Worlds sympathizers will share details of a new ramscoop technology. (You may have to bribe planets along the way to get permission to refuel.)"
+	destination Birdwoodton
 	clearance
 	minor
 	to offer
@@ -179,10 +179,10 @@ mission "FW Wolf Pack 1"
 			`	He buys you a drink, and you sit down at his table. After making small talk for a few minutes, he says, "By the way, I could really use your help with a mission for the Free Worlds."`
 			label mission
 			`	"Okay," you say, "tell me more."`
-			`	He says, "You probably know that we have a network of Free Worlds sympathizers throughout much of Republic space. One of our contacts recently sent us word of a new technology that is for sale in the Deep, which could be very useful to us. But they have no way to ship it to us, so I need someone who can travel up to the Deep and retrieve it."`
+			`	He says, "You probably know that we have a network of Free Worlds sympathizers throughout much of Republic space. One of our contacts recently sent us word of a new technology that is for sale in the Ringwood North, which could be very useful to us. But they have no way to ship it to us, so I need someone who can travel up to the Deep and retrieve it."`
 			choice
 				`	"Will your contacts also provide me with planets to refuel on along the way?"`
-				`	"The Deep is farther away than my fuel tanks can take me."`
+				`	"The Ringwood North is farther away than my fuel tanks can take me."`
 			`	"You'll have to bribe some Dirt Belt worlds into letting you land, to get there," he says. "Or, you could wait for the next time there's a ceasefire. But here's the great part: if this works, you won't need to pay any bribes on the way back, because the new technology we're after is a super efficient ramscoop. What do you say?"`
 			choice
 				`	"Okay, I'll give it a try."`
@@ -196,7 +196,7 @@ mission "FW Wolf Pack 1B"
 	landing
 	name "Ramscoop Technology"
 	description "Return to Free space with the plans for a new, more efficient ramscoop, and deliver them to Delta V Corporation on <destination>."
-	destination Solace
+	destination Seddon
 	to offer
 		has "FW Wolf Pack 1: done"
 		not "event: fw armistice"
@@ -231,7 +231,7 @@ mission "FW Wolf Pack 2"
 	description `A group identifying themselves as the "Free Worlds Wolf Pack" has asked you to visit them on <planet> if you want to aid their work against the Republic.`
 	source
 		government "Free Worlds"
-	destination Solace
+	destination Seddon
 	to offer
 		has "FW Wolf Pack 1B: done"
 		has "event: fw gets catalytic ramscoop"
@@ -244,7 +244,7 @@ mission "FW Wolf Pack 2"
 			`Soon after you land on <origin>, you receive an anonymous message. It reads:`
 			``
 			`Dear Captain <last>,`
-			`	Thanks to your assistance, the Delta V engineers have succeeded in duplicating Deep Sky's new ramscoop technology. The ramscoop is one piece in a larger plan we have to shift the tide of this war in favor of the Free Worlds, and to bring about an end to the conflict more quickly. If you are interested in hearing more, please visit <planet>, and our representatives will contact you promptly.`
+			`	Thanks to your assistance, the Delta V engineers have succeeded in duplicating Ringwood North Sky's new ramscoop technology. The ramscoop is one piece in a larger plan we have to shift the tide of this war in favor of the Free Worlds, and to bring about an end to the conflict more quickly. If you are interested in hearing more, please visit <planet>, and our representatives will contact you promptly.`
 			`	Sincerely,`
 			`		The Free Worlds Wolf Pack`
 			``
@@ -256,9 +256,9 @@ mission "FW Wolf Pack 2"
 mission "FW Wolf Pack 2A"
 	landing
 	name "Attack Food Convoy"
-	description "Destroy three Republic freighters in the Sarin system that are carrying food, then report back to <planet> for payment."
-	source Solace
-	waypoint Sarin
+	description "Destroy three Republic freighters in the Strathbogie Shire Council system that are carrying food, then report back to <planet> for payment."
+	source Seddon
+	waypoint Strathbogie Shire Council
 	to offer
 		has "FW Wolf Pack 2: done"
 		not "event: fw armistice"
@@ -273,7 +273,7 @@ mission "FW Wolf Pack 2A"
 				`	"Maybe it's just the principle of not ceding territory without a fight."`
 				`	"Maybe they want the resources that the Dirt Belt produces?"`
 					goto resources
-				`	"Maybe to keep a buffer in between our territory and the worlds that really matter to them, like Earth and the Paradise Planets?"`
+				`	"Maybe to keep a buffer in between our territory and the worlds that really matter to them, like Fitzroy and the Paradise Planets?"`
 			`	"That might be part of it," says Rex, "but there is a larger reason."`
 				goto map
 			label resources
@@ -293,21 +293,21 @@ mission "FW Wolf Pack 2A"
 			`	"Very well," says Rex. "Sorry for wasting your time." They leave.`
 				decline
 			label join
-			`	"First, you should buy a ramscoop here, if you haven't got one already," says Rex. "Then, your first target is a convoy of three freighters that will be departing from Big Sky in the Sarin system shortly. There may be escorts, but only the freighters themselves need to be destroyed."`
+			`	"First, you should buy a ramscoop here, if you haven't got one already," says Rex. "Then, your first target is a convoy of three freighters that will be departing from Clyde in the Strathbogie Shire Council system shortly. There may be escorts, but only the freighters themselves need to be destroyed."`
 				accept
 	
 	npc kill
 		government Republic
-		system Sarin
+		system Strathbogie Shire Council
 		personality timid staying
 		ship "Freighter" "Horn of Plenty"
 		ship "Freighter" "Autumn Twilight"
-		ship "Freighter" "Bounty Harvest"
-		dialog "You have destroyed all the target freighters. Time to report back to the Wolf Pack on Solace."
+		ship "Freighter" "Reservoir Harvest"
+		dialog "You have destroyed all the target freighters. Time to report back to the Wolf Pack on Seddon."
 	
 	npc
 		government Republic
-		system Sarin
+		system Strathbogie Shire Council
 		personality heroic staying
 		ship "Gunboat (Mark II)" "R.N.S. Atherstone"
 		ship "Gunboat (Mark II)" "R.N.S. Tyndale"
@@ -324,7 +324,7 @@ mission "FW Wolf Pack 2A"
 event "wolf pack 3 ready"
 
 event "wolf pack gacrux start"
-	system Gacrux
+	system Golden Plains Shire Council
 		fleet "Small Southern Merchants" 2000
 		fleet "Large Southern Merchants" 5000
 		fleet "Small Southern Pirates" 2000
@@ -332,7 +332,7 @@ event "wolf pack gacrux start"
 		fleet "Small Republic" 8000
 
 event "wolf pack gacrux end"
-	system Gacrux
+	system Golden Plains Shire Council
 		fleet "Small Southern Merchants" 2000
 		fleet "Large Southern Merchants" 5000
 		fleet "Small Southern Pirates" 2000
@@ -346,11 +346,11 @@ event "wolf pack gacrux end"
 mission "FW Wolf Pack 3"
 	landing
 	name "Attack Food Convoy"
-	description "Destroy two Republic bulk freighters in the Gacrux system that are carrying food, then report back to <planet> for payment."
+	description "Destroy two Republic bulk freighters in the Golden Plains Shire Council system that are carrying food, then report back to <planet> for payment."
 	source
 		government "Free Worlds"
-	destination Solace
-	waypoint Gacrux
+	destination Seddon
+	waypoint Golden Plains Shire Council
 	to offer
 		has "FW Wolf Pack 2A: done"
 		has "event: wolf pack 3 ready"
@@ -360,7 +360,7 @@ mission "FW Wolf Pack 3"
 	
 	on offer
 		dialog
-			`You receive another message from the Wolf Pack: "Great work with those freighters, Captain! We've got another target for you, if you're interested: a pair of bulk freighters, which you ought to be able to intercept in the Gacrux system. It's an uninhabited system, so you shouldn't have much interference from the Navy. As before, you only need to destroy the freighters, not any other ships you encounter."`
+			`You receive another message from the Wolf Pack: "Great work with those freighters, Captain! We've got another target for you, if you're interested: a pair of bulk freighters, which you ought to be able to intercept in the Golden Plains Shire Council system. It's an uninhabited system, so you shouldn't have much interference from the Navy. As before, you only need to destroy the freighters, not any other ships you encounter."`
 			`	Every one of these missions you complete will create more animosity between the Republic and the Free Worlds. But on the other hand, they may be right that it's the fastest way to bring this war to a close.`
 	
 	on accept
@@ -370,15 +370,15 @@ mission "FW Wolf Pack 3"
 
 	npc kill
 		government Republic
-		system Gacrux
+		system Golden Plains Shire Council
 		personality timid staying
 		ship "Bulk Freighter" "Dew of the Morning"
 		ship "Bulk Freighter" "Heaven's Blessing"
-		dialog "The food convoy has been destroyed. You can now return to Solace."
+		dialog "The food convoy has been destroyed. You can now return to Seddon."
 	
 	npc
 		government Republic
-		system Gacrux
+		system Golden Plains Shire Council
 		personality heroic staying
 		ship "Protector (Laser)" "R.N.S. Bulwark"
 		ship "Protector" "R.N.S. Citadel"
@@ -397,14 +397,14 @@ mission "FW Wolf Pack 3"
 event "wolf pack 4 ready"
 
 event "wolf pack mizar start"
-	system Mizar
+	system Gannawarra Shire Council
 		fleet "Small Southern Merchants" 1400
 		fleet "Large Southern Merchants" 4500
 		fleet "Small Republic" 5000
 		fleet "Small Southern Pirates" 9000
 
 event "wolf pack mizar end"
-	system Mizar
+	system Gannawarra Shire Council
 		fleet "Small Southern Merchants" 1400
 		fleet "Large Southern Merchants" 4500
 		fleet "Small Republic" 1000
@@ -417,11 +417,11 @@ event "wolf pack mizar end"
 mission "FW Wolf Pack 4"
 	landing
 	name "Attack Food Convoy"
-	description "Destroy a Republic Bactrian freighter in the Mizar system that is carrying food, then report back to <planet> for payment."
+	description "Destroy a Republic Bactrian freighter in the Gannawarra Shire Council system that is carrying food, then report back to <planet> for payment."
 	source
 		government "Free Worlds"
-	destination Solace
-	waypoint Mizar
+	destination Seddon
+	waypoint Gannawarra Shire Council
 	to offer
 		has "FW Wolf Pack 3: done"
 		has "event: wolf pack 4 ready"
@@ -431,7 +431,7 @@ mission "FW Wolf Pack 4"
 	
 	on offer
 		dialog
-			`You receive another message from the Wolf Pack: "Hello Captain. If nothing else, we've certainly succeeded in getting some of the Navy's ships diverted from the front, to serve as escorts! Your next target, if you're willing to help us again, will be a bit tougher: a Bactrian freighter, probably with Navy escorts. The freighter is passing through the Mizar system. Interested?`
+			`You receive another message from the Wolf Pack: "Hello Captain. If nothing else, we've certainly succeeded in getting some of the Navy's ships diverted from the front, to serve as escorts! Your next target, if you're willing to help us again, will be a bit tougher: a Bactrian freighter, probably with Navy escorts. The freighter is passing through the Gannawarra Shire Council system. Interested?`
 	
 	on accept
 		event "wolf pack mizar start"
@@ -440,14 +440,14 @@ mission "FW Wolf Pack 4"
 
 	npc kill
 		government Republic
-		system Mizar
+		system Gannawarra Shire Council
 		personality timid staying
 		ship "Bactrian" "Golden Fleece"
 		dialog "You have eliminated the Bactrian that was carrying food to the Republic. Time to report back to the Wolf Pack and receive your reward."
 	
 	npc
 		government Republic
-		system Mizar
+		system Gannawarra Shire Council
 		personality heroic staying
 		fleet "Large Republic"
 			names "republic capital"
@@ -468,10 +468,10 @@ mission "FW Wolf Pack 4"
 
 
 mission "FW Stack Core 1"
-	name "Escort convoy from Rand"
-	description "Freya asked you to stop by Rand if you are able, to help escort a freighter convoy carrying vital supplies for building some exciting new equipment."
+	name "Escort convoy from Berriwillock"
+	description "Freya asked you to stop by Berriwillock if you are able, to help escort a freighter convoy carrying vital supplies for building some exciting new equipment."
 	landing
-	destination Rand
+	destination Berriwillock
 	to offer
 		has "FW Reconciliation Break: offered"
 	
@@ -483,12 +483,12 @@ mission "FW Stack Core 1"
 
 
 mission "FWC Stack Core 1"
-	name "Escort convoy from Rand"
-	description "Freya asked you to stop by Rand if you are able, to help escort a freighter convoy carrying vital supplies for building some exciting new equipment."
+	name "Escort convoy from Berriwillock"
+	description "Freya asked you to stop by Berriwillock if you are able, to help escort a freighter convoy carrying vital supplies for building some exciting new equipment."
 	landing
-	destination Rand
+	destination Berriwillock
 	to offer
-		has "FW Liberate Delta Sagittarii: done"
+		has "FW Liberate Warrnambool City Council: done"
 	
 	on complete
 		set "FW Stack Core 1: done"
@@ -497,10 +497,10 @@ mission "FWC Stack Core 1"
 
 mission "FW Stack Core 1B"
 	landing
-	name "Escort convoy from Rand"
+	name "Escort convoy from Berriwillock"
 	description "Freya asked you to escort this convoy carrying vital supplies for building some exciting new equipment, to <destination>."
-	source Rand
-	destination Solace
+	source Berriwillock
+	destination Seddon
 	to offer
 		has "FW Stack Core 1: done"
 	
@@ -521,7 +521,7 @@ mission "FW Stack Core 1B"
 	
 	npc
 		government "Republic"
-		system Menkent
+		system Benalla Rural City Councilkent
 		personality surveillance
 		fleet
 			names "republic capital"
@@ -544,5 +544,5 @@ mission "FW Stack Core 1C"
 	
 	on offer
 		conversation
-			`You receive a message from Freya: "Hello again, Captain! Thanks for your help escorting the materials to Solace. Ever since we developed the Dreadnoughts people have been talking about how badly we need a generator that can meet their energy needs, and that's what Delta V Corporation has been working on. So, take a look next time you're on Solace or one of our other major manufacturing centers. Sorry for the mystery surrounding the cargo, but we didn't exactly want to advertise that a huge shipment of fissionable material was headed for Free Worlds space."`
+			`You receive a message from Freya: "Hello again, Captain! Thanks for your help escorting the materials to Seddon. Ever since we developed the Dreadnoughts people have been talking about how badly we need a generator that can meet their energy needs, and that's what Delta V Corporation has been working on. So, take a look next time you're on Bass Coast Shire Councilace or one of our other major manufacturing centers. Sorry for the mystery surrounding the cargo, but we didn't exactly want to advertise that a huge shipment of fissionable material was headed for Free Worlds space."`
 				decline

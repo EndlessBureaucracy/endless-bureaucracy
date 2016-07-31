@@ -66,14 +66,14 @@ mission "First Contact: Quarg"
 
 
 
-mission "First Contact: Kuwaru Efreti"
+mission "First Contact: Newport"
 	landing
-	source "Kuwaru Efreti"
+	source "Newport"
 	to offer
 		has "First Contact: Quarg: offered"
 	on offer
 		conversation
-			`In your past experience, you've never seen the Quarg move with anything approaching haste or excitement, but when you land on this station a group of them run up to you, moving faster than you thought they were able to. For a minute or two they just gawk at you and talk amongst themselves in their own language; you think you recognize the word "Humani," and perhaps, "Eartha."`
+			`In your past experience, you've never seen the Quarg move with anything approaching haste or excitement, but when you land on this station a group of them run up to you, moving faster than you thought they were able to. For a minute or two they just gawk at you and talk amongst themselves in their own language; you think you recognize the word "Humani," and perhaps, "Fitzroya."`
 			`	Finally a Quarg appears who speaks your language, or at least is willing to try. It says, "Welcome, astonishing sojourner. Whither came you, and wherefore visit you us here in the unquiet graveyard of the Korathi?"`
 			choice
 				`	"I'm just here to explore. Can you tell me more about the Korath?"`

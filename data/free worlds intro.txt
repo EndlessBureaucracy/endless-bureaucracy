@@ -10,14 +10,14 @@
 
 mission "Pact Recon 0"
 	name "Pirate Reconnaissance"
-	description "Fly through the Alniyat, Han, Atria, and Lesath systems, then report to <destination>, so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
-	waypoint "Alniyat"
-	waypoint "Han"
-	waypoint "Atria"
-	waypoint "Lesath"
+	description "Fly through the Greater Dandenong City Council, Indigo Shire Council, Maroondah City Council, and Wodonga City Council systems, then report to <destination>, so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
+	waypoint "Greater Dandenong City Council"
+	waypoint "Indigo Shire Council"
+	waypoint "Maroondah City Council"
+	waypoint "Wodonga City Council"
 	source
 		attributes south
-	destination Glaze
+	destination Bandiana
 	to offer
 		random < 60
 		not "event: war begins"
@@ -54,27 +54,27 @@ mission "Pact Recon 0"
 				`	"Sure, I would be glad to help."`
 				`	"Sorry, sounds too risky."`
 					decline
-			`	"Great!" she says. "Right now, we need more eyes on a few systems on the edge of Southern space. All you need to do is fly through those systems, then report to our base on Glaze. I'll mark the target systems on your map."`
+			`	"Great!" she says. "Right now, we need more eyes on a few systems on the edge of Southern space. All you need to do is fly through those systems, then report to our base on Bandiana. I'll mark the target systems on your map."`
 				accept
 	
 	on complete
 		payment 25000
 		dialog
-			`A different female militia officer approaches you when you land on <planet>, and gives you <payment> in exchange for your scanner logs of the southern systems. "My name is Freya Winters," she says. "I'll be in touch when we've got a new assignment for you."`
+			`A different female militia officer approaches you when you land on <planet>, and gives you <payment> in exchange for your scanner logs of the southern systems. "My name is Freya Goorambats," she says. "I'll be in touch when we've got a new assignment for you."`
 
 
 
 mission "Pact Recon 1"
 	landing
 	name "Pirate Reconnaissance"
-	description "Fly through the Wei, Alnasl, Eber, and Alpha Arae systems, then report to <destination>, so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
-	waypoint "Wei"
-	waypoint "Alnasl"
-	waypoint "Eber"
-	waypoint "Alpha Arae"
+	description "Fly through the Hume City Council, Glenelg Shire Council, Alpine Shire Council, and Greater Geelong City Council systems, then report to <destination>, so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
+	waypoint "Hume City Council"
+	waypoint "Glenelg Shire Council"
+	waypoint "Alpine Shire Council"
+	waypoint "Greater Geelong City Council"
 	source
 		attributes south "dirt belt" rim "near earth"
-	destination Glaze
+	destination Bandiana
 	to offer
 		random < 40
 		not "event: war begins"
@@ -87,21 +87,21 @@ mission "Pact Recon 1"
 	on complete
 		payment 35000
 		dialog
-			`You transfer your sensor logs to Officer Winters. She thanks you for your work, and pays you <payment>. She says, "I'll let you know when we need your services again."`
+			`You transfer your sensor logs to Officer Goorambats. She thanks you for your work, and pays you <payment>. She says, "I'll let you know when we need your services again."`
 
 
 
 mission "Pact Recon 2"
 	landing
 	name "Pirate Reconnaissance"
-	description "Fly through the Men, Antares, Shaula, and Nunki systems, then report to <destination>, so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
-	waypoint "Men"
-	waypoint "Antares"
-	waypoint "Shaula"
-	waypoint "Nunki"
+	description "Fly through the Benalla Rural City Council, Knox City Council, Whittlesea City Council, and Hindmarsh Shire Council systems, then report to <destination>, so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
+	waypoint "Benalla Rural City Council"
+	waypoint "Knox City Council"
+	waypoint "Whittlesea City Council"
+	waypoint "Hindmarsh Shire Council"
 	source
 		attributes south "dirt belt" rim "near earth"
-	destination Glaze
+	destination Bandiana
 	to offer
 		random < 40
 		not "event: war begins"
@@ -114,21 +114,21 @@ mission "Pact Recon 2"
 	on complete
 		payment 60000
 		dialog
-			`Freya Winters meets up with you in person soon after you land. "I hope you didn't have much trouble," she says, as she hands you a credit chip for <payment>. "You've been a great help to us. I'll be sure to contact you next time we need a scout."`
+			`Freya Goorambats meets up with you in person soon after you land. "I hope you didn't have much trouble," she says, as she hands you a credit chip for <payment>. "You've been a great help to us. I'll be sure to contact you next time we need a scout."`
 
 
 
 mission "Pact Recon 3"
 	landing
 	name "Pirate Reconnaissance"
-	description "Fly through the Orvala, Hintar, Naper, and Boral systems, searching for a gathering pirate fleet. Report to the Pact on <destination> when you are done."
-	waypoint "Orvala"
-	waypoint "Hintar"
-	waypoint "Naper"
-	waypoint "Boral"
+	description "Fly through the Horsham Rural City Council, Mansfield Shire Council, Greater Geelong City Council, and Monash City Council systems, searching for a gathering pirate fleet. Report to the Pact on <destination> when you are done."
+	waypoint "Horsham Rural City Council"
+	waypoint "Mansfield Shire Council"
+	waypoint "Greater Geelong City Council"
+	waypoint "Monash City Council"
 	source
 		attributes south "dirt belt" rim "near earth"
-	destination Glaze
+	destination Bandiana
 	to offer
 		random < 40
 		not "event: war begins"
@@ -136,19 +136,19 @@ mission "Pact Recon 3"
 	
 	on offer
 		dialog
-			`Once again, you receive a message from Freya Winters. "We have another mission for you," she says, "this one a bit more dangerous. We've heard rumors of a pirate fleet massing in one of the seldom-visited systems in the Dirt Belt, and we need to know where they are. Interested in helping to track them down? As before, you don't need to fight them, just observe them."`
+			`Once again, you receive a message from Freya Goorambats. "We have another mission for you," she says, "this one a bit more dangerous. We've heard rumors of a pirate fleet massing in one of the seldom-visited systems in the Dirt Belt, and we need to know where they are. Interested in helping to track them down? As before, you don't need to fight them, just observe them."`
 	
 	npc
 		government Pirate
 		personality staying plunders disables
-		system Naper
+		system Greater Geelong City Council
 		fleet "Small Southern Pirates" 3
 		fleet "Large Northern Pirates"
 	
 	on complete
 		payment 80000
 		dialog
-			`You report to Freya that you found a sizable pirate fleet in the Naper system, as well as spotting some pirates elsewhere. She thanks you, and pays you <payment>. "Thank you for your assistance," she says. "Again, I'll be in touch if we need you."`
+			`You report to Freya that you found a sizable pirate fleet in the Greater Geelong City Council system, as well as spotting some pirates elsewhere. She thanks you, and pays you <payment>. "Thank you for your assistance," she says. "Again, I'll be in touch if we need you."`
 
 
 
@@ -190,14 +190,14 @@ mission "Pact Questioning"
 			choice
 				`	"I don't remember anyone's name in particular."`
 				`	"I would rather not name any names."`
-				`	"I usually reported to an officer named Freya Winters."`
+				`	"I usually reported to an officer named Freya Goorambats."`
 					goto freya
 				`	"I don't want to talk about this. I'm leaving."`
 					goto quit
 			`	"Oh well," he says, "it was worth asking. Would you at least be willing to tell me the nature of the missions you were performing?"`
 				goto missions
 			label freya
-			`	"Ah yes, Miss Winters," he says. "A very capable woman, although she's more skilled as an engineer than as a leader. Can you tell me what sort of work you were performing for her?"`
+			`	"Ah yes, Miss Goorambats," he says. "A very capable woman, although she's more skilled as an engineer than as a leader. Can you tell me what sort of work you were performing for her?"`
 			label missions
 			choice
 				`	"I'd rather not say."`
@@ -231,8 +231,8 @@ mission "FW Recon 0"
 	minor
 	source
 		government "Free Worlds"
-		near Aldhibain 1 10
-	destination Glaze
+		near Buloke Shire Council 1 10
+	destination Bandiana
 	to offer
 		random < 35
 		has "event: initial deployment 4"
@@ -269,7 +269,7 @@ mission "FW Recon 1"
 	name "Free Worlds Reconnaissance"
 	description "Perform an outfit scan on the cruiser <npc>, then report to a Free Worlds officer on <destination>."
 	source
-		planet Glaze
+		planet Bandiana
 	to offer
 		has "FW Recon 0: done"
 	to fail
@@ -305,7 +305,7 @@ mission "FW Recon 1"
 				`	"Never mind sir, I was just admiring your... impressive equipment."`
 					goto equipment
 			label engines
-			`	"Nice, aren't they?" he says. "Atomic engines, the very latest in propulsion technology from Deep Sky. They're so smooth and responsive, I feel like I'm back piloting a shuttlecraft again."`
+			`	"Nice, aren't they?" he says. "Atomic engines, the very latest in propulsion technology from Ringwood North Sky. They're so smooth and responsive, I feel like I'm back piloting a shuttlecraft again."`
 			`	He pauses, then adds, "They pay me a thousand credits every time I say that."`
 				goto close
 			label equipment
@@ -322,20 +322,20 @@ mission "FW Recon 1"
 
 mission "FW Recon 2"
 	name "Free Worlds Reconnaissance"
-	description "Scan any ships in the Menkent system that are equipped like the combat-ready cruiser you scanned previously, then return to <destination>."
+	description "Scan any ships in the Benalla Rural City Councilkent system that are equipped like the combat-ready cruiser you scanned previously, then return to <destination>."
 	source
-		planet Glaze
+		planet Bandiana
 	to offer
 		has "FW Recon 1: done"
 	to fail
 		has "chosen sides"
-	waypoint Menkent
+	waypoint Benalla Rural City Councilkent
 	
 	on offer
 		conversation
 			`You meet up with the militia officer in the spaceport bar. "Glad you showed up," he says, "I'm Jean-Jacques, by the way, but you can call me JJ."`
-			`	You introduce yourself in return, and he continues. "Here's the deal. I'm the commander of the militia on Glaze. So far, we and the Navy are not shooting at each other, because no one wants to fire the first shot. But if they're getting ready to change that, they'll start refitting their cruisers with heavy weaponry instead of surveillance equipment. So, I need to know how many more of their ships are equipped like the one you just scanned."`
-			`	He continues, "I'd like you to go to Menkent, where they're building some sort of secret base. Scan any ships you think match the one we just saw, then bring your scanner logs back here for me to look at."`
+			`	You introduce yourself in return, and he continues. "Here's the deal. I'm the commander of the militia on Bandiana. So far, we and the Navy are not shooting at each other, because no one wants to fire the first shot. But if they're getting ready to change that, they'll start refitting their cruisers with heavy weaponry instead of surveillance equipment. So, I need to know how many more of their ships are equipped like the one you just scanned."`
+			`	He continues, "I'd like you to go to Benalla Rural City Councilkent, where they're building some sort of secret base. Scan any ships you think match the one we just saw, then bring your scanner logs back here for me to look at."`
 			choice
 				`	"Sure, I'd be glad to do that."`
 					accept
@@ -345,7 +345,7 @@ mission "FW Recon 2"
 	npc "scan outfits"
 		government Republic
 		personality staying uninterested
-		system Menkent
+		system Benalla Rural City Councilkent
 		fleet
 			names "republic capital"
 			fighters "republic fighter"
@@ -363,9 +363,9 @@ mission "FW Recon 3"
 	name "Free Worlds Reconnaissance"
 	description "Land on <destination> and secretly collect information on the developing Navy base there."
 	source
-		planet Glaze
+		planet Bandiana
 	destination
-		planet "New Wales"
+		planet "Alberton West"
 	to offer
 		has "FW Recon 2: done"
 	to fail
@@ -373,7 +373,7 @@ mission "FW Recon 3"
 	
 	on offer
 		conversation
-			`You meet JJ again in the bar. "I have one more reconnaissance mission for you," he says. "The Navy is building a base on New Wales, adjacent to the existing spaceport. From what I understand, they're employing thousands of locals to build it, so one more worker walking around would not seem out of place. I need you to walk around the base, take notes on the number and size of the landing pads and hangars, take pictures if you can, and report back to me. What do you say?"`
+			`You meet JJ again in the bar. "I have one more reconnaissance mission for you," he says. "The Navy is building a base on Alberton West, adjacent to the existing spaceport. From what I understand, they're employing thousands of locals to build it, so one more worker walking around would not seem out of place. I need you to walk around the base, take notes on the number and size of the landing pads and hangars, take pictures if you can, and report back to me. What do you say?"`
 			choice
 				`	"Sure, I can do that."`
 					accept
@@ -395,9 +395,9 @@ mission "FW Recon 3B"
 	description "Return to <destination>, with information on the Navy base on <origin>."
 	landing
 	source
-		planet "New Wales"
+		planet "Alberton West"
 	destination
-		planet Glaze
+		planet Bandiana
 	to offer
 		has "FW Recon 3: done"
 	to fail
@@ -451,7 +451,7 @@ mission "FW Katya 1"
 		has "chosen sides"
 	source
 		government "Free Worlds"
-	destination Glory
+	destination Laverton
 	on offer
 		conversation
 			`Wandering through the spaceport, you have stopped for a moment to read the menu posted in front of a restaurant, when your thoughts are interrupted by the click of a gun being cocked right behind your head, and a woman's voice saying, "Think fast, Captain."`
@@ -488,7 +488,7 @@ mission "FW Katya 1"
 					decline
 	
 			label `more`
-			`	"Okay, here's the deal. We need some cargo carried from <planet> to Skymoot. It's just medical supplies - no bombs, no contraband. But we'll load it onto your ship in the dead of night, trying our best to avoid any notice. But the Reps have the sharpest eyes in the galaxy, so you'll get noticed anyway. And since anything done in the dead of night is likely to arouse their suspicions, you'll get boarded and searched. Meanwhile, the real cargo will have been loaded onto one of our ships in broad daylight, and will pass through Republic space entirely unnoticed."`
+			`	"Okay, here's the deal. We need some cargo carried from <planet> to Bolinda. It's just medical supplies - no bombs, no contraband. But we'll load it onto your ship in the dead of night, trying our best to avoid any notice. But the Reps have the sharpest eyes in the galaxy, so you'll get noticed anyway. And since anything done in the dead of night is likely to arouse their suspicions, you'll get boarded and searched. Meanwhile, the real cargo will have been loaded onto one of our ships in broad daylight, and will pass through Republic space entirely unnoticed."`
 			choice
 				`	"I like the way you think. Count me in."`
 					goto `details`
@@ -530,14 +530,14 @@ mission "FW Katya 1B"
 		has "FW Katya 1: done"
 	to fail
 		has "chosen sides"
-	source Glory
-	destination Skymoot
+	source Laverton
+	destination Bolinda
 	passengers 2
 	cargo "surgical gear" 10
 	blocked "You have reached <origin>, but you need <capacity> in order to take on Katya's mission for the Free Worlds. Return here when you have the required space free."
 	on offer
 		conversation
-			`Soon after you land, a middle-aged tourist couple approach you and ask if you'd be willing to take them to Skymoot, "to see the dragons. Katerina recommended you." You tell them you would be glad to.`
+			`Soon after you land, a middle-aged tourist couple approach you and ask if you'd be willing to take them to Bolinda, "to see the dragons. Katerina recommended you." You tell them you would be glad to.`
 			`	The man, who is wearing floral print shorts and carrying an absurdly large camera, introduces himself as Marty. "And this is my wife, Sarah," he adds. "Would you mind taking a picture of us?" They pose in front of your ship. "Better take two pictures in case she blinks," says Marty. As you help them bring their oversized suitcases on board, you can't help wondering why Katya would be friends with such a quintessential pair of rich, uncultured buffoons.`
 			`	Much later that night, as planned, three shadowy figures load a set of unmarked crates into your cargo bay. Katya assured you that the contents are harmless, just intended to distract the Republic security officers, but you can't help feeling like you're getting involved in something shady.`
 				accept
@@ -551,7 +551,7 @@ mission "FW Katya 1B"
 				`	"Wait a minute... were they the secret cargo?"`
 			
 			`	Katya explains, "The Andersons are defecting to the Free Worlds. Their dream is to make terraforming a public service, supported by government funds, rather than a luxury available only to the richest of planets. We worked for years to get Parliament to accept that idea, but with no luck. And because of Henry's background and knowledge about the intelligence community, the Republic would have stopped them if they knew they were defecting."`
-			`	She adds, "The real secret cargo, which arrived several days ago via a faster ship, was their personal possessions and Lynn's lab equipment and instruments, which were loaded onto a ship supposedly bound for Hestia."`
+			`	She adds, "The real secret cargo, which arrived several days ago via a faster ship, was their personal possessions and Lynn's lab equipment and instruments, which were loaded onto a ship supposedly bound for Frankston."`
 			`	"We had just rented a cottage there," says Henry, "saying we were downsizing. We'll lose the security deposit, of course, but it gave us an excuse to pack up and move."`
 			`	Katya says, "You might not guess it from the outfit he's wearing, but Henry is an absolute mastermind at subtlety and misdirection. He planned the whole thing." She hands you a credit chip for <payment>. "Thanks so much for your help. If you're willing to continue helping the Free Worlds, meet me in the spaceport bar in half an hour."`
 
@@ -644,7 +644,7 @@ mission "FW Katya Alt 2"
 	minor
 	source
 		government "Free Worlds"
-	destination Foundry
+	destination Annuello
 	blocked "You have reached <origin>, but you have no bunks free for Mr. Eyes. Return here when you have a bunk available, or abort one of your other missions to make room for this one."
 	passengers 1
 	to offer
@@ -677,8 +677,8 @@ mission "FW Katya Alt 2"
 mission "FW Katya 2"
 	name "Transport Mr. Eyes"
 	description "Katya Reynolds asked you to travel to <destination>, where her friend Mr. Eyes is waiting for you."
-	source Skymoot
-	destination Foundry
+	source Bolinda
+	destination Annuello
 	passengers 1
 	to offer
 		has "FW Katya 1B: done"
@@ -701,8 +701,8 @@ mission "FW Katya 2B"
 	landing
 	name "Transport Mr. Eyes"
 	description "Transport Mr. Eyes to <destination>, where the recent terrorist attack took place."
-	source Foundry
-	destination Geminus
+	source Annuello
+	destination Alberton
 	clearance
 	passengers 1
 	npc
@@ -759,7 +759,7 @@ mission "FW Katya 2B"
 				`	"Well, then, what's our plan?"`
 			
 			label plan
-			`	"First," he says, "we need to go to Geminus, where the attack happened. I can explain more when we get there. In the meantime, I should also warn you that I seem to have terrible luck with pirates showing up wherever I go. It's almost like someone has put a price on my head." He grins.`
+			`	"First," he says, "we need to go to Alberton, where the attack happened. I can explain more when we get there. In the meantime, I should also warn you that I seem to have terrible luck with pirates showing up wherever I go. It's almost like someone has put a price on my head." He grins.`
 				accept
 
 
@@ -768,8 +768,8 @@ mission "FW Katya 2C"
 	landing
 	name "Transport Mr. Eyes"
 	description "Bring Mr. Eyes to <destination>, where you will meet up with Katya (and hopefully get paid)."
-	source Geminus
-	destination Rand
+	source Alberton
+	destination Berriwillock
 	passengers 1
 	to offer
 		has "FW Katya 2B: done"
@@ -792,7 +792,7 @@ mission "FW Katya 2C"
 mission "FW Katya 3"
 	name "Drone Hunting"
 	description `Disable a surveillance drone (ideally when no cruisers are watching), board it, "salvage" its surveillance equipment, and return to <destination>. (Until you leave the system where you disabled the drone, other Republic ships may attack you.)`
-	source Rand
+	source Berriwillock
 	to offer
 		has "FW Katya 2C: done"
 	to fail
@@ -849,8 +849,8 @@ mission "FW Katya 3"
 mission "FW Katya 4"
 	name "Katya and Mr. Eyes"
 	description "Stop on <destination>, and check the planet for signs of nuclear testing."
-	source Rand
-	destination Oblivion
+	source Berriwillock
+	destination Beulah
 	blocked "You need bunks for both Katya and Eyes in order to continue this mission."
 	passengers 2
 	to offer
@@ -861,7 +861,7 @@ mission "FW Katya 4"
 		conversation
 			`You join Katya and Mr. Eyes in the restaurant, and order your meals. They are both in high spirits. While you are waiting for the food to arrive, Mr. Eyes raises his glass of wine and says, "A toast, to Captain <last> and our marvelous new toy. May it bring us good information and swift justice."`
 			`	"We're thinking that while we're in the area, we should stop on <planet> next," says Katya, "and then work our way toward the Rim."`
-			`	Your meals arrive. The food is excellent, and you spend a relaxed evening sharing stories of your childhoods. Katya turns out to be a Dirt Belt native like yourself, from a planet named Hope. "No longer settled," she explains. "Supervolcano. It was a cold planet to start out with, and the eruption sent it into an ice age that could last for millennia. My home town is under thirty meters of glacier by now."`
+			`	Your meals arrive. The food is excellent, and you spend a relaxed evening sharing stories of your childhoods. Katya turns out to be a Dirt Belt native like yourself, from a planet named Hallam. "No longer settled," she explains. "Supervolcano. It was a cold planet to start out with, and the eruption sent it into an ice age that could last for millennia. My home town is under thirty meters of glacier by now."`
 			choice
 				`	"Was anyone killed?"`
 				`	"How did you escape?"`
@@ -874,7 +874,7 @@ mission "FW Katya 4"
 				`	"You've almost convinced me to join the Navy."`
 			
 			`	"Our fight isn't with the Navy," says Katya. "Most of them are good people. I'm sure they don't want war any more than we do. They're like police officers who are suddenly being asked to fight against the very people they swore to protect and serve."`
-			`	"I was a child on Vinci while this was happening," says Eyes. "A paradise world. I would listen to the news and could never understand why all the adults around me were so very, very angry that the Navy had gone off to rescue two million people from freezing to death. But they told me that we lived in one little island of safety in a dangerous galaxy, and that without the Navy protecting us the pirates or even maybe aliens would sweep in and destroy our homes and take our money. That it was us against the whole galaxy."`
+			`	"I was a child on Ballarat Central while this was happening," says Eyes. "A paradise world. I would listen to the news and could never understand why all the adults around me were so very, very angry that the Navy had gone off to rescue two million people from freezing to death. But they told me that we lived in one little island of safety in a dangerous galaxy, and that without the Navy protecting us the pirates or even maybe aliens would sweep in and destroy our homes and take our money. That it was us against the whole galaxy."`
 			`	"I'd hate to be rich," says Katya. "So much to fear."`
 			`	You finish your meal (Katya pays the tab), and agree to take off for <planet> first thing in the morning.`
 				accept
@@ -885,8 +885,8 @@ mission "FW Katya 5"
 	landing
 	name "Information Gathering"
 	description "Bring Katya and Mr. Eyes to <destination>, where some monks may be able to help you negotiate with the pirates for information."
-	source Oblivion
-	destination Harmony
+	source Beulah
+	destination Viewbank
 	passengers 2
 	to offer
 		has "FW Katya 4: done"
@@ -910,8 +910,8 @@ mission "FW Katya 5"
 				goto pirates
 			
 			label pirates
-			`	Katya says, "What we need is some leads to follow. I bet we could buy information on Greenrock. Whenever anyone is doing something illegal in this sector, there's a good chance the pirates are helping them."`
-			`	Mr. Eyes says, "Unless you've got boatloads of money to give the pirates, we need someone who's friendly with them, who can convince them to talk for free. We should go to the Brothers on Harmony."`
+			`	Katya says, "What we need is some leads to follow. I bet we could buy information on Areegra. Whenever anyone is doing something illegal in this sector, there's a good chance the pirates are helping them."`
+			`	Mr. Eyes says, "Unless you've got boatloads of money to give the pirates, we need someone who's friendly with them, who can convince them to talk for free. We should go to the Brothers on Viewbank."`
 			`	"That's not a bad idea," says Katya, "as long as they don't make me sit through one of their church services. I always fall asleep."`
 			`	"What do you say, Captain?" asks Eyes. "Want to visit a monastery?"`
 			choice
@@ -941,8 +941,8 @@ mission "FW Katya 5B"
 	landing
 	name "Information Gathering"
 	description "Travel to <planet> with Brother Greg and see if he can get any information from the pirates there. (Hail the planet to have him negotiate landing clearance.)"
-	source Harmony
-	destination Greenrock
+	source Viewbank
+	destination Areegra
 	clearance `Brother Greg talks briefly with the spaceport traffic controller. When they realize who he is, they agree to let you land "without paying the usual fee."`
 	passengers 2
 	to offer
@@ -956,7 +956,7 @@ mission "FW Katya 5B"
 				`	"I'm <first>. Pleased to meet you."`
 			
 			`	Katya asks, "Is Brother Greg here?"`
-			`	"Sure," says David. "Come inside." The monastery building is a stone and brick structure that looks like pictures you have seen of ancient Earth. He leads you down a long hallway and into a sitting room with furniture that looks equally antique, and then leaves.`
+			`	"Sure," says David. "Come inside." The monastery building is a stone and brick structure that looks like pictures you have seen of ancient Fitzroy. He leads you down a long hallway and into a sitting room with furniture that looks equally antique, and then leaves.`
 			`	As you are waiting, Eyes explains, "Brother Greg is in charge of the monastery's outreach and ministry to pirate crew members."`
 			choice
 				`	"That sounds even odder than being a vigilante nuclear inspector."`
@@ -971,7 +971,7 @@ mission "FW Katya 5B"
 			`	"Consider this," says Katya. "In the galactic south, the average age of a pirate crew member is seventeen years old. And many are much younger than that. They're more like street kids than like hardened criminals."`
 			`	Just then, Brother Greg walks in. Mr. Eyes introduces you to him and explains your situation. Greg frowns, thoughtfully. "What do we have to offer in exchange for that information?" he asks.`
 			`	Katya says, "Ever since this conflict began, southern space has been swarming not only with an increased militia presence, but with the whole Republic Navy. That must make it awfully hard to be a pirate. Seems like the pirates would be glad if the Navy got what they were looking for and went back up north."`
-			`	Brother Greg nods. "It's worth a try. Why don't you join us for dinner, and we'll depart for Greenrock in the morning. When we get there, just hail the planet and let me do the talking, and I can probably get permission to land for free."`
+			`	Brother Greg nods. "It's worth a try. Why don't you join us for dinner, and we'll depart for Areegra in the morning. When we get there, just hail the planet and let me do the talking, and I can probably get permission to land for free."`
 			`	You join the brothers for a simple but delicious dinner, soup and salad made entirely from their own gardens. After dinner, Greg asks you, "Do you want to join us for evening prayer?"`
 			choice
 				`	"Sure, I'd be glad to."`
@@ -989,7 +989,7 @@ mission "FW Katya 5B"
 			`	When the service ends, the monks depart for their rooms in silence, and Eyes, with a brief nod to you, does the same.`
 			
 			label morning
-			`	At breakfast in the monastery, Mr. Eyes tells you, "I'm going to be staying here until you get back. Greenrock is no place for a man with a price on his head. But Katya will be going with you." You bring Katya and Greg back to your ship and get ready to take off.`
+			`	At breakfast in the monastery, Mr. Eyes tells you, "I'm going to be staying here until you get back. Areegra is no place for a man with a price on his head. But Katya will be going with you." You bring Katya and Greg back to your ship and get ready to take off.`
 				accept
 
 
@@ -998,8 +998,8 @@ mission "FW Katya 5C"
 	landing
 	name "Information Gathering"
 	description "Return to <planet> with Katya and Brother Greg."
-	source Greenrock
-	destination Harmony
+	source Areegra
+	destination Viewbank
 	passengers 2
 	to offer
 		has "FW Katya 5B: done"
@@ -1029,8 +1029,8 @@ mission "FW Katya 5C"
 mission "FW Katya 6"
 	name "The Hunt Continues"
 	description "Take Katya and Eyes to <destination>."
-	source Harmony
-	destination Sinter
+	source Viewbank
+	destination Bayswater
 	passengers 2
 	to offer
 		has "FW Katya 5C: done"
@@ -1044,7 +1044,7 @@ mission "FW Katya 6"
 				`	"Sorry, I'm through with helping the Free Worlds. I don't think we have a chance of beating the Navy to the punch."`
 					decline
 			
-			`	"Great!" says Katya. "We'll stop on <planet> first, then swing by Hopper and on to New Iceland. If we still haven't found anything by that point, we'll start working our way up the Rim."`
+			`	"Great!" says Katya. "We'll stop on <planet> first, then swing by Alma and on to Malvern. If we still haven't found anything by that point, we'll start working our way up the Rim."`
 				accept
 
 
@@ -1053,8 +1053,8 @@ mission "FW Katya 6B"
 	landing
 	name "The Hunt Continues"
 	description "Take Katya and Eyes to <destination>."
-	source Sinter
-	destination Hopper
+	source Bayswater
+	destination Alma
 	passengers 2
 	to offer
 		has "FW Katya 6: done"
@@ -1072,8 +1072,8 @@ mission "FW Katya 6C"
 	landing
 	name "The Hunt Continues"
 	description "Take Katya and Eyes to <destination>."
-	source Hopper
-	destination "New Iceland"
+	source Alma
+	destination "Malvern"
 	passengers 2
 	to offer
 		has "FW Katya 6B: done"
@@ -1090,8 +1090,8 @@ mission "FW Katya 7"
 	landing
 	name "The Hunt Continues"
 	description "Take Katya and Eyes to <destination>, to check for signs of underwater testing."
-	source "New Iceland"
-	destination Deep
+	source "Malvern"
+	destination Ringwood North
 	passengers 2
 	to offer
 		has "FW Katya 6C: done"
@@ -1101,7 +1101,7 @@ mission "FW Katya 7"
 		conversation
 			`<origin> turns out no differently than the previous two. "We need a change in strategy," says Katya. "We've been talking about something while we were in transit."`
 			`	Eyes says, "It occurred to me that underwater testing might be even easier than underground: no need to dig or find a mine shaft. And, the Navy's sensors are for atmosphere, not oceans. But I've still got my old test kits with me for seawater."`
-			`	Katya says, "So then we wondered, what sort of world would you go to if you wanted rumblings in the ocean to go unnoticed? Either an unpopulated one, or one with lots of meteorite activity. And that leads us to... Deep." She points out the system on your map. "Mild tidal surges on almost a weekly basis, due to impacts from all the asteroids in system. Perfect place to hide an undersea explosion."`
+			`	Katya says, "So then we wondered, what sort of world would you go to if you wanted rumblings in the ocean to go unnoticed? Either an unpopulated one, or one with lots of meteorite activity. And that leads us to... Ringwood North." She points out the system on your map. "Mild tidal surges on almost a weekly basis, due to impacts from all the asteroids in system. Perfect place to hide an undersea explosion."`
 			choice
 				`	"Sounds like a good possibility. Let's give it a try!"`
 					accept
@@ -1114,8 +1114,8 @@ mission "FW Katya 7B"
 	landing
 	name "The Hunt Continues"
 	description "Take Katya and Eyes to the mining moon <planet>."
-	source Deep
-	destination Clink
+	source Ringwood North
+	destination Allendale
 	passengers 2
 	to offer
 		has "FW Katya 7: done"
@@ -1156,8 +1156,8 @@ mission "FW Katya 7C"
 	landing
 	name "Bring Eyes to <planet>"
 	description "While Katya is undercover on <origin>, bring Mr. Eyes to <destination>, to report to the Free Worlds."
-	source Clink
-	destination Zug
+	source Allendale
+	destination Garfield
 	passengers 1
 	to offer
 		has "FW Katya 7B: done"
@@ -1166,7 +1166,7 @@ mission "FW Katya 7C"
 	on offer
 		conversation
 			`You land some distance from the mining settlement, and Mr. Eyes goes into the airlock in a pressure suit, cycling it to bring in some of the moon's thin atmosphere for him to test. "Firing up my instruments now," he says through the comm link. There is a long pause, and then he starts spouting a long string of creative profanity. Katya runs over to the airlock window to see what is happening.`
-			`	Finally, Eyes calms down enough to say, "It's a match! Not only has there been a recent test here, but the signature matches the one we took on Geminus. This is it."`
+			`	Finally, Eyes calms down enough to say, "It's a match! Not only has there been a recent test here, but the signature matches the one we took on Alberton. This is it."`
 			`	He cycles the airlock and comes back inside. "Let's fly around and see if we can find the site," he says. After a few hours of flying low over the surface and scanning for radiation signatures, you find a spot that looks like all the other meteorite craters but is full of radiation. Katya and Eyes look at the images of the surface almost in disbelief.`
 			`	"Based on the isotopic decay rates, this explosion happened in mid-June," says Eyes. "Just before the attacks happened."`
 			`	"It makes no sense," says Katya. "It's a blatant atmospheric test. No way the Navy hasn't found this. The Navy could act on this at any moment. Captain, is the outpost reporting any miner's jobs open?"`
@@ -1200,7 +1200,7 @@ mission "FW Escort 1"
 	autosave
 	source
 		government "Free Worlds"
-	destination Wayfarer
+	destination Darnum
 	to offer
 		has "assisted free worlds"
 		random < 40
@@ -1233,18 +1233,18 @@ mission "FW Escort 1"
 		personality plunders staying
 		government Pirate
 		fleet "Large Southern Pirates"
-		system "Alpha Arae"
+		system "Greater Geelong City Council"
 	npc
 		personality plunders staying
 		government Pirate
 		fleet "Large Southern Pirates"
-		system "Lesath"
+		system "Wodonga City Council"
 	npc
 		personality plunders waiting
 		government Pirate
 		fleet "Large Southern Pirates"
 		fleet "Large Southern Pirates"
-		system "Tarazed"
+		system "Central Goldfields Shire Council"
 	
 	on offer
 		conversation
@@ -1270,8 +1270,8 @@ mission "FW Escort 1B"
 	name "Free Worlds Escort"
 	description "Escort a Free Worlds supply convoy safely to <destination>."
 	autosave
-	source Wayfarer
-	destination Longjump
+	source Darnum
+	destination Callignee
 	to offer
 		has "FW Escort 1: done"
 	to fail
@@ -1303,18 +1303,18 @@ mission "FW Escort 1B"
 		personality plunders staying
 		government Pirate
 		fleet "Large Southern Pirates"
-		system "Alpha Arae"
+		system "Greater Geelong City Council"
 	npc
 		personality plunders staying
 		government Pirate
 		fleet "Large Southern Pirates"
-		system "Lesath"
+		system "Wodonga City Council"
 	npc
 		personality plunders waiting
 		government Pirate
 		fleet "Large Southern Pirates"
 		fleet "Large Southern Pirates"
-		system "Sabik"
+		system "Nillumbik Shire Council"
 	
 	on offer
 		conversation
@@ -1338,8 +1338,8 @@ mission "FW Escort 2"
 	name "Free Worlds Escort"
 	description "Escort a Free Worlds supply convoy safely to <destination>."
 	autosave
-	source Longjump
-	destination Wayfarer
+	source Callignee
+	destination Darnum
 	to offer
 		has "FW Escort 1B: done"
 	to fail
@@ -1366,19 +1366,19 @@ mission "FW Escort 2"
 		personality plunders staying
 		government Pirate
 		fleet "Large Southern Pirates"
-		system "Alpha Arae"
+		system "Greater Geelong City Council"
 	npc
 		personality plunders staying
 		government Pirate
 		fleet "Large Southern Pirates"
-		system "Lesath"
+		system "Wodonga City Council"
 	npc
 		personality plunders waiting
 		government Pirate
 		fleet "Large Southern Pirates"
 		fleet "Large Southern Pirates"
 		fleet "Large Southern Pirates"
-		system "Tarazed"
+		system "Central Goldfields Shire Council"
 	
 	on offer
 		conversation
@@ -1404,8 +1404,8 @@ mission "FW Escort 2B"
 	name "Free Worlds Escort"
 	autosave
 	description "Escort a Free Worlds supply convoy safely to <destination>."
-	source Wayfarer
-	destination Longjump
+	source Darnum
+	destination Callignee
 	to offer
 		has "FW Escort 2: done"
 	to fail
@@ -1435,7 +1435,7 @@ mission "FW Escort 2B"
 		fleet "Large Southern Pirates"
 		fleet "Small Southern Pirates"
 		fleet "Small Southern Pirates"
-		system "Alpha Arae"
+		system "Greater Geelong City Council"
 	npc
 		personality plunders staying
 		government Pirate
@@ -1443,14 +1443,14 @@ mission "FW Escort 2B"
 		fleet "Large Southern Pirates"
 		fleet "Small Southern Pirates"
 		fleet "Small Southern Pirates"
-		system "Lesath"
+		system "Wodonga City Council"
 	npc
 		personality plunders waiting
 		government Pirate
 		fleet "Large Southern Pirates"
 		fleet "Small Southern Pirates"
 		fleet "Small Southern Pirates"
-		system "Sabik"
+		system "Nillumbik Shire Council"
 	
 	on offer
 		conversation
@@ -1472,24 +1472,24 @@ mission "FW Escort 2B"
 
 mission "FW Escort 3"
 	name "Stranded Freighter"
-	description "Repair the <npc>, which is stranded in the Lesath system, and escort it safely back to <destination>."
+	description "Repair the <npc>, which is stranded in the Wodonga City Council system, and escort it safely back to <destination>."
 	autosave
-	source Longjump
-	waypoint Lesath
+	source Callignee
+	waypoint Wodonga City Council
 	to offer
 		has "FW Escort 2B: done"
 	to fail
 		has "chosen sides"
 	
 	npc accompany save
-		system Lesath
+		system Wodonga City Council
 		personality escort derelict timid
 		government "Merchant"
 		ship "Freighter" "F.S. Shackleton"
 	
 	on offer
 		conversation
-			`	When you walk into the bar, Voigt looks very glad to see you. "Here's the deal," he says. "One of our freighters, the <npc>, was just disabled in the Lesath system. We need you to fly there immediately, repair it, and bring it back here before it can be captured by the pirates. Do you think you're up to the task?"`
+			`	When you walk into the bar, Voigt looks very glad to see you. "Here's the deal," he says. "One of our freighters, the <npc>, was just disabled in the Wodonga City Council system. We need you to fly there immediately, repair it, and bring it back here before it can be captured by the pirates. Do you think you're up to the task?"`
 			choice
 				`	"Sure!"`
 				`	"Sorry, I'm just a merchant captain. The Free Worlds shouldn't be asking me to do combat missions."`
@@ -1517,9 +1517,9 @@ mission "FW Escort Second Chance"
 	description "Return to <destination>, to meet up with Tomek Voigt and see if he will forgive you for failing the escort mission he gave you."
 	minor
 	source
-		near Sabik 1 1000
+		near Nillumbik Shire Council 1 1000
 		government "Free Worlds"
-	destination Longjump
+	destination Callignee
 	to offer
 		has "fw intro escort failed"
 		not "chosen sides"
@@ -1563,9 +1563,9 @@ mission "FW Escort Second Chance"
 
 
 
-mission "FW Bounty 1"
-	name "Free Worlds Bounty Hunting"
-	description `Hunt down and destroy the "Rat Pack," a gang of pirate ships led by a flagship named "Cluny." They were last seen attacking freighters in the Seginus system.`
+mission "FW Reservoir 1"
+	name "Free Worlds Reservoir Hunting"
+	description `Hunt down and destroy the "Rat Pack," a gang of pirate ships led by a flagship named "Cluny." They were last seen attacking freighters in the Wangaratta Rural City Council system.`
 	minor
 	source
 		government "Free Worlds"
@@ -1581,13 +1581,13 @@ mission "FW Bounty 1"
 				`	"Well, I'd be glad to destroy them for you."`
 				`	"Sorry, I don't want to have anything to do with the Free Worlds."`
 					decline
-			`	"Excellent," she says. "They call themselves the 'Rat Pack,' and you'll recognize them because most of their ships are named after various vermin, although for some unknown reason their flagship is just named 'Cluny.' They were last seen in the Seginus system, just east of Free space. Thank you in advance for your help."`
+			`	"Excellent," she says. "They call themselves the 'Rat Pack,' and you'll recognize them because most of their ships are named after various vermin, although for some unknown reason their flagship is just named 'Cluny.' They were last seen in the Wangaratta Rural City Council system, just east of Free space. Thank you in advance for your help."`
 				accept
 	npc kill
 		personality heroic staying nemesis
-		government Bounty
+		government Reservoir
 		system
-			near Seginus 1 2
+			near Wangaratta Rural City Council 1 2
 		ship "Hawk (Rocket)" "Cluny"
 		ship "Hawk (Speedy)" "Ferret"
 		ship "Berserker (Afterburner)" "Weasel"
@@ -1602,13 +1602,13 @@ mission "FW Bounty 1"
 
 
 
-mission "FW Bounty 2"
-	name "Free Worlds Bounty Hunting"
-	description `A Free Worlds militia officer from <destination> asked you to hunt down the Moonless Night, a pirate ship last seen in the Delta Sagittarii system.`
+mission "FW Reservoir 2"
+	name "Free Worlds Reservoir Hunting"
+	description `A Free Worlds militia officer from <destination> asked you to hunt down the Moonless Night, a pirate ship last seen in the Warrnambool City Council system.`
 	source
 		government "Free Worlds"
 	to offer
-		has "FW Bounty 1: done"
+		has "FW Reservoir 1: done"
 		random <= 30
 		not "chosen sides"
 	
@@ -1619,13 +1619,13 @@ mission "FW Bounty 2"
 				`	"Sure, I do love destroying pirates!"`
 				`	"Sorry, I'm way too busy right now."`
 					defer
-			`	He grins. "Your target this time is a retrofitted heavy freighter by the name of Moonless Night that has been stealing large amounts of cargo from our supply convoys. It was last seen in the Delta Sagittarii system. Good luck, Captain."`
+			`	He grins. "Your target this time is a retrofitted heavy freighter by the name of Moonless Night that has been stealing large amounts of cargo from our supply convoys. It was last seen in the Warrnambool City Council system. Good luck, Captain."`
 				accept
 	npc kill
 		personality heroic staying nemesis
-		government Bounty
+		government Reservoir
 		system
-			near "Delta Sagittarii" 1 2
+			near "Warrnambool City Council" 1 2
 		ship "Behemoth (Speedy)" "Moonless Night"
 		dialog `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
 	
@@ -1635,13 +1635,13 @@ mission "FW Bounty 2"
 
 
 
-mission "FW Bounty 3"
-	name "Free Worlds Bounty Hunting"
-	description `A Free Worlds militia officer from <destination> asked you to hunt down the Silverhawk, a pirate ship last seen in the Shaula system.`
+mission "FW Reservoir 3"
+	name "Free Worlds Reservoir Hunting"
+	description `A Free Worlds militia officer from <destination> asked you to hunt down the Edithvalehawk, a pirate ship last seen in the Whittlesea City Council system.`
 	source
 		government "Free Worlds"
 	to offer
-		has "FW Bounty 2: done"
+		has "FW Reservoir 2: done"
 		random <= 30
 		not "chosen sides"
 	
@@ -1652,13 +1652,13 @@ mission "FW Bounty 3"
 				`	"Yes, I'm sure my ship will be up to the challenge."`
 				`	"Sorry, I'm not interested in giving the Free Worlds more assistance."`
 					decline
-			`	"Great," he says. "Your target is named the Silverhawk. After we nearly destroyed it, we think it went to the Shaula system to hide out. Which means that you'll probably have to deal with other pirates at the same time. The Silverhawk has weapons that seem to interfere with a ship's electrical systems, draining power from them. Good luck, Captain."`
+			`	"Great," he says. "Your target is named the Edithvalehawk. After we nearly destroyed it, we think it went to the Whittlesea City Council system to hide out. Which means that you'll probably have to deal with other pirates at the same time. The Silverhawk has weapons that seem to interfere with a ship's electrical systems, draining power from them. Good luck, Captain."`
 				accept
 	npc kill
 		personality heroic staying nemesis
-		government Bounty
-		system "Shaula"
-		ship "Osprey (Alien Weapons)" "Silverhawk"
+		government Reservoir
+		system "Whittlesea City Council"
+		ship "Osprey (Alien Weapons)" "Edithvalehawk"
 		dialog `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
 	
 	on complete
@@ -1675,7 +1675,7 @@ mission "FW Commitment"
 	minor
 	source
 		government "Free Worlds"
-	destination "Bourne"
+	destination "Anglers Rest"
 	to offer
 		"assisted free worlds" >= 3
 		has "FW Katya 7C: done"
@@ -1687,25 +1687,25 @@ mission "FW Commitment"
 			`Soon after you land, a courier arrives at your ship and hands you a formal looking letter. It reads:`
 			``
 			`Dear Captain <last>,`
-			`	The Free Worlds council would like to thank you for the invaluable assistance you have rendered to us recently. We are prepared to offer you a position as an officer in our militia, remaining in command of your own ship. Your starting salary will be 300 credits per diem. If you want to join us, please report to our headquarters on Bourne at your earliest convenience.`
+			`	The Free Worlds council would like to thank you for the invaluable assistance you have rendered to us recently. We are prepared to offer you a position as an officer in our militia, remaining in command of your own ship. Your starting salary will be 300 credits per diem. If you want to join us, please report to our headquarters on Anglers Rest at your earliest convenience.`
 			`	Sincerely,`
 			`				Tomek Voigt`
-			`				Jean-Jacques Soleau`
-			`				Freya Winters`
+			`				Jean-Jacques Bass Coast Shire Councileau`
+			`				Freya Goorambats`
 			`				Alondo Gruyere`
 			`				Katerina Reynolds`
 			``
-			`	You notice that Katya's name is printed, instead of signed like the others; she must still be undercover on Clink.`
+			`	You notice that Katya's name is printed, instead of signed like the others; she must still be undercover on Allendale.`
 				accept
 
 
 
 mission "Rescue Katya 1"
 	name "Rescue Katya"
-	description "Rescue Katya from <planet>, before the Navy discovers her, and bring her safely to Longjump."
+	description "Rescue Katya from <planet>, before the Navy discovers her, and bring her safely to Callignee."
 	landing
-	source Bourne
-	destination Clink
+	source Anglers Rest
+	destination Allendale
 	to offer
 		has "FW Commitment: done"
 	on fail
@@ -1713,7 +1713,7 @@ mission "Rescue Katya 1"
 	
 	on offer
 		conversation
-			`You are on Bourne, the capital of the Free Worlds. Do you take them up on their job offer and volunteer to officially join them?`
+			`You are on Anglers Rest, the capital of the Free Worlds. Do you take them up on their job offer and volunteer to officially join them?`
 			choice
 				`	(Yes.)`
 				`	(Not yet.)`
@@ -1722,7 +1722,7 @@ mission "Rescue Katya 1"
 			`	You find the Free Worlds offices and give your name to the person at the front desk. A few minutes later Tomek Voigt, who employed you as an escort captain, comes down the stairs to greet you, accompanied by a man you don't recognize. "Captain <last>," he says, "this is Alondo, another council member, a diplomat by training. We are very happy to formally offer you a job." You shake hands with both of them.`
 			`	That night, the Council takes you out to dinner at a very fancy restaurant. Halfway through the third course of the meal, Tomek's communicator beeps. He reaches over to turn it off, then sees the message and turns pale. A hush falls over the table. "<system> has been captured by the Navy," he announces.`
 			`	After a long silence, JJ asks, "How many casualties?"`
-			`	"None," says Tomek. "The Navy claimed that <system> was the source of the terrorist attack, and after they showed the evidence to the militia commander on Deep he surrendered and yielded control of the system to them without a fight."`
+			`	"None," says Tomek. "The Navy claimed that <system> was the source of the terrorist attack, and after they showed the evidence to the militia commander on Ringwood North he surrendered and yielded control of the system to them without a fight."`
 			choice
 				`	"Was Katya still there? We need to rescue her!"`
 					goto rescue
@@ -1735,16 +1735,16 @@ mission "Rescue Katya 1"
 			
 			label attack
 			`	JJ says, "Calm down, Captain. Combat is our last option, not our first. And if their claim is correct, they were justified in taking the system."`
-			`	Freya says, "Uniting the militias could take weeks. A much more pressing issue is that Katya is still on Clink, unless anyone has heard otherwise from her."`
+			`	Freya says, "Uniting the militias could take weeks. A much more pressing issue is that Katya is still on Allendale, unless anyone has heard otherwise from her."`
 				goto help
 			
 			label help
-			`	"Well," says Alondo, "it's a good thing we haven't yet publicly announced that Captain <last> is working for us. Captain, we have one final mission for you as an independent merchant captain. We need you to stop on Clink, locate Katya, and bring her safely to Longjump without being stopped by the Navy."`
+			`	"Well," says Alondo, "it's a good thing we haven't yet publicly announced that Captain <last> is working for us. Captain, we have one final mission for you as an independent merchant captain. We need you to stop on Allendale, locate Katya, and bring her safely to Callignee without being stopped by the Navy."`
 				accept
 	
 	on accept
 		set "chosen sides"
-		event "capture of Kornephoros"
+		event "capture of Warrnambool City Council"
 
 
 
@@ -1752,8 +1752,8 @@ mission "Rescue Katya 2"
 	landing
 	name "Rescue Katya"
 	description "Return to <planet> and report to the Free Worlds council that you were unable to locate Katya."
-	source Clink
-	destination Longjump
+	source Allendale
+	destination Callignee
 	to offer
 		has "Rescue Katya 1: done"
 	on fail
@@ -1761,7 +1761,7 @@ mission "Rescue Katya 2"
 	
 	on offer
 		conversation
-			`The mining outpost on Clink is swarming with Navy officers; you would guess that they in fact outnumber the miners. You are not sure how you are going to get in there and contact Katya without the Navy noticing.`
+			`The mining outpost on Allendale is swarming with Navy officers; you would guess that they in fact outnumber the miners. You are not sure how you are going to get in there and contact Katya without the Navy noticing.`
 			choice
 				`	(Wait in my ship and see if she approaches.)`
 					goto wait
@@ -1801,11 +1801,11 @@ mission "Rescue Katya 2"
 
 
 
-mission "Defend Sabik"
+mission "Defend Nillumbik Shire Council"
 	landing
-	name "Defend Sabik"
-	description "Help to repulse a Navy attack on Sabik, then land on Longjump to debrief."
-	source Longjump
+	name "Defend Nillumbik Shire Council"
+	description "Help to repulse a Navy attack on Nillumbik Shire Council, then land on Callignee to debrief."
+	source Callignee
 	to offer
 		has "Rescue Katya 2: done"
 	on fail
@@ -1852,7 +1852,7 @@ mission "Defend Sabik"
 	npc evade
 		personality heroic
 		government Republic
-		system Kornephoros
+		system Warrnambool City Council
 		fleet
 			names "republic capital"
 			fighters "republic fighter"
@@ -1895,7 +1895,7 @@ mission "Defend Sabik"
 	npc
 		personality heroic disables
 		government "Free Worlds"
-		system "Zubenelgenubi"
+		system "Maribyrnong City Council"
 		fleet
 			names "free worlds capital"
 			variant
@@ -1906,7 +1906,7 @@ mission "Defend Sabik"
 	npc
 		personality heroic disables
 		government "Free Worlds"
-		system "Zubeneschamali"
+		system "Maroondah City Council"
 		fleet
 			names "free worlds capital"
 			variant
@@ -1921,7 +1921,7 @@ mission "Defend Sabik"
 	npc
 		personality heroic disables
 		government "Free Worlds"
-		system "Unukalhai"
+		system "Glenelg Shire Council"
 		fleet
 			names "free worlds capital"
 			variant

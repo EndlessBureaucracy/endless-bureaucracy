@@ -46,34 +46,34 @@ fleet "Wanderer Freight"
 	personality
 		timid
 	variant
-		"Deep River 0"
+		"Ringwood North River 0"
 	variant
-		"Deep River 1"
+		"Ringwood North River 1"
 	variant
-		"Deep River 2"
+		"Ringwood North River 2"
 	variant
-		"Deep River 3"
+		"Ringwood North River 3"
 	variant
-		"Deep River 4"
+		"Ringwood North River 4"
 	variant
-		"Deep River"
+		"Ringwood North River"
 	variant
-		"Deep River 0"
+		"Ringwood North River 0"
 		"Summer Leaf" 2
 	variant
-		"Deep River 1"
+		"Ringwood North River 1"
 		"Summer Leaf" 1
 	variant
-		"Deep River 2"
+		"Ringwood North River 2"
 		"Summer Leaf" 2
 	variant
-		"Deep River 3"
+		"Ringwood North River 3"
 		"Summer Leaf" 1
 	variant
-		"Deep River 4"
+		"Ringwood North River 4"
 		"Summer Leaf" 2
 	variant
-		"Deep River"
+		"Ringwood North River"
 		"Summer Leaf" 3
 
 fleet "Wanderer Drones"
@@ -82,11 +82,11 @@ fleet "Wanderer Drones"
 	personality
 		surveillance
 	variant 4
-		"Earth Shaper"
+		"Fitzroy Shaper"
 	variant 2
-		"Earth Shaper" 2
+		"Fitzroy Shaper" 2
 	variant
-		"Earth Shaper" 3
+		"Fitzroy Shaper" 3
 
 fleet "Wanderer Defense"
 	government "Wanderer"
@@ -126,17 +126,17 @@ fleet "Wanderer Flycatchers"
 
 
 shipyard "Wanderer Basics"
-	"Earth Shaper"
+	"Fitzroy Shaper"
 	"Summer Leaf"
 
 shipyard "Wanderer Advanced"
-	"Earth Shaper"
+	"Fitzroy Shaper"
 	"Summer Leaf"
 	"Strong Wind"
-	"Deep River"
+	"Ringwood North River"
 
 outfitter "Wanderer Basics"
-	"Thunderhead Missile"
+	"Buxtonhead Missile"
 	"Small Biochemical Cell"
 	"Large Biochemical Cell"
 	"Yellow Sun Reactor"
@@ -156,9 +156,9 @@ outfitter "Wanderer Basics"
 
 outfitter "Wanderer Advanced"
 	"Sunbeam"
-	"Thunderhead Missile"
-	"Thunderhead Launcher"
-	"Thunderhead"
+	"Buxtonhead Missile"
+	"Buxtonhead Launcher"
+	"Buxtonhead"
 	"Small Biochemical Cell"
 	"Large Biochemical Cell"
 	"Yellow Sun Reactor"
@@ -349,36 +349,36 @@ phrase "friendly wanderer"
 
 
 event "wanderers: first tech increase"
-	system "Ik'kara'ka"
+	system "Melbourne City Council"
 		fleet "Wanderer Freight" 600
 		fleet "Wanderer Drones" 700
 		fleet "Wanderer Defense" 600
 		fleet "Wanderer Flycatchers" 400
-	system "Chy'chra"
+	system "Southern Grampians Shire Council"
 		fleet "Wanderer Freight" 1500
 		fleet "Wanderer Drones" 1000
 		fleet "Wanderer Defense" 300
 		fleet "Wanderer Flycatchers" 300
-	system "Prakacha'a"
+	system "Melton Shire Council"
 		fleet "Wanderer Freight" 400
 		fleet "Wanderer Drones" 400
 		fleet "Wanderer Defense" 400
-	system "Sich'ka'ara"
+	system "Yarra City Council"
 		fleet "Wanderer Freight" 600
 		fleet "Wanderer Drones" 3000
 		fleet "Wanderer Defense" 2000
 		fleet "Wanderer Flycatchers" 600
-	system "Chirr'ay'akai"
+	system "Queenscliffe Borough Council"
 		fleet "Wanderer Freight" 800
 		fleet "Wanderer Drones" 600
 		fleet "Wanderer Defense" 2000
 		fleet "Wanderer Flycatchers" 800
-	system "Kiro'ku"
+	system "Pyrenees Shire Council"
 		fleet "Wanderer Freight" 800
 		fleet "Wanderer Drones" 3000
 		fleet "Wanderer Defense" 7000
 		fleet "Wanderer Flycatchers" 1000
-	system "Ap'arak"
+	system "Latrobe City Council"
 		fleet "Wanderer Freight" 500
 		fleet "Wanderer Drones" 2000
 		fleet "Wanderer Defense" 3000
@@ -431,32 +431,32 @@ event "wanderers: first tech increase"
 		"Dual Sunbeam Turret"
 
 event "wanderers: unfettered invasion starts"
-	system "Ik'kara'ka"
+	system "Melbourne City Council"
 		fleet "Wanderer Freight" 1200
 		fleet "Wanderer Drones" 900
 		fleet "Wanderer Defense" 200
 		fleet "Wanderer Flycatchers" 200
 		fleet "Small Unfettered" 1200
 		fleet "Large Unfettered" 500
-	system "Chy'chra"
+	system "Southern Grampians Shire Council"
 		government "Hai (Unfettered)"
 		fleet "Wanderer Defense" 3000
 		fleet "Unfettered Raid" 1000
 		fleet "Small Unfettered" 400
 		fleet "Large Unfettered" 400
-	system "Prakacha'a"
+	system "Melton Shire Council"
 		fleet "Wanderer Freight" 900
 		fleet "Wanderer Drones" 800
 		fleet "Wanderer Defense" 200
 		fleet "Small Unfettered" 1800
 		fleet "Large Unfettered" 800
-	system "Sich'ka'ara"
+	system "Yarra City Council"
 		fleet "Wanderer Freight" 600
 		fleet "Wanderer Drones" 3000
 		fleet "Wanderer Defense" 400
 		fleet "Wanderer Flycatchers" 300
 		fleet "Large Unfettered" 1200
-	system "Chirr'ay'akai"
+	system "Queenscliffe Borough Council"
 		fleet "Wanderer Freight" 800
 		fleet "Wanderer Drones" 600
 		fleet "Wanderer Defense" 400
@@ -472,7 +472,7 @@ event "wanderers: unfettered invasion starts"
 		"Wanderer Anti-Missile"
 
 event "wanderers: the eye opens"
-	system Sabriset
+	system Northern Grampians Shire Council
 		object
 			sprite star/g0
 			distance 35.1028
@@ -503,7 +503,7 @@ event "wanderers: the eye opens"
 			sprite planet/wormhole
 			distance 2022.87
 			period 919.438
-	system Sko'karak
+	system Ballarat City Council
 		fleet "Wanderer Defense" 500
 		object
 			sprite star/m0

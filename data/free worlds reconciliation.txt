@@ -12,10 +12,10 @@ mission "FW Reconciliation 1"
 	name "Pick up Ijs from <planet>"
 	description "Bring Katya and Sawyer to <destination>, along with Raven's ship (the Eye of Horus), and pick up Ijs and his equipment for detecting atomic testing."
 	autosave
-	source "New Tibet"
-	destination "Winter"
+	source "Bushfield"
+	destination "Goorambat"
 	to offer
-		has "FW Defend New Tibet: done"
+		has "FW Defend Bushfield: done"
 	passengers 2
 	on fail
 		dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
@@ -88,11 +88,11 @@ mission "FW Reconciliation 1"
 
 
 event "fw empty gienah"
-	system Gienah
+	system Greater Geelong City Council
 		fleet "Small Core Pirates" 5000
 
 event "fw restore gienah"
-	system Gienah
+	system Greater Geelong City Council
 		fleet "Small Core Pirates" 500
 		fleet "Large Core Pirates" 800
 		fleet "Large Syndicate" 5000
@@ -102,8 +102,8 @@ mission "FW Reconciliation 1B"
 	description "Bring Ijs, Sawyer, and Katya to <system>. Destroy any Syndicate ships that are watching you, then land on <planet>. Make sure Raven's ship arrives there as well. You may need to bribe Syndicate worlds to let you refuel."
 	autosave
 	landing
-	source Winter
-	destination Mutiny
+	source Goorambat
+	destination Alexandra
 	clearance
 	passengers 3
 	blocked "You need another bunk free (for Ijs) in order to continue this mission."
@@ -139,10 +139,10 @@ mission "FW Reconciliation 1B"
 	
 	npc evade
 		personality heroic staying nemesis
-		system Gienah
+		system Greater Geelong City Council
 		government Syndicate
 		ship "Splinter (Mark II)" "Silence"
-		ship "Quicksilver (Mark II)" "Light-Bearer"
+		ship "Kealba (Mark II)" "Light-Bearer"
 		ship "Manta (Mark II)" "Morning Star"
 	
 	on complete
@@ -154,8 +154,8 @@ mission "FW Reconciliation 1C"
 	name "Bring evidence to <planet>"
 	description "Travel to <planet>, without you or Raven being killed by the Syndicate, to present your evidence and Sawyer's confession to Parliament."
 	landing
-	source Mutiny
-	destination Earth
+	source Alexandra
+	destination Fitzroy
 	clearance
 	passengers 3
 	to offer
@@ -169,7 +169,7 @@ mission "FW Reconciliation 1C"
 			`	Sawyer directs you to the site where the secret development took place. Nothing is left but a wide and slightly overgrown clearing. After checking your radar and seeing no incoming ships, you risk landing. Sawyer says that there were buildings here a few years ago, but now not even their foundations remain, and a sensor sweep for metallic objects turns up nothing, not even as small as a single nail.`
 			`	However, Ijs points out a few subtle signs of human habitation. "A clearing like this would normally form in a fire," he says, "but notice, no fire scars on the trees on the edges of the clearing."`
 			`	Raven says, "And our geophysical radar is picking up structures underground. Several deep shafts, and rock that's been stressed and fractured by a large explosion. They did a good job of hiding everything else, but if you scar a planet that badly, it doesn't go away. The stones speak."`
-			`	As you continue inspecting the site, suddenly Raven's copilot shouts out the door of her gunboat at you. "Syndicate ships have entered the system! We need to get back to Earth with the evidence, quickly!"`
+			`	As you continue inspecting the site, suddenly Raven's copilot shouts out the door of her gunboat at you. "Syndicate ships have entered the system! We need to get back to Fitzroy with the evidence, quickly!"`
 				launch
 	
 	npc accompany save
@@ -194,23 +194,23 @@ mission "FW Reconciliation 1C"
 		personality heroic nemesis waiting
 		government Syndicate
 		fleet "Large Syndicate"
-		system Markab
+		system Alpine Shire Council
 	
 	npc
 		personality heroic nemesis waiting
 		government Syndicate
 		fleet "Large Syndicate"
-		system Alnair
+		system Glen Eira City Council
 
 
 
 mission "FW Reconciliation 2"
-	name "Visit to the Deep"
-	description "One of the representatives from the Deep gave you a note requesting that you visit them on <destination>. Travel there with Katya, Ijs, Sawyer, and Raven."
+	name "Visit to the Ringwood North"
+	description "One of the representatives from the Ringwood North gave you a note requesting that you visit them on <destination>. Travel there with Katya, Ijs, Sawyer, and Raven."
 	autosave
 	landing
-	source Earth
-	destination Valhalla
+	source Fitzroy
+	destination Bellbrae
 	passengers 3
 	to offer
 		has "FW Reconciliation 1C: done"
@@ -247,14 +247,14 @@ mission "FW Reconciliation 2"
 			`	You can't help but realize how many people here represent Syndicate worlds. One of them, an older man, asks, "What possible reason would the Syndicate have to launch such an attack?"`
 			`	Sawyer says, "They have complex mathematical models of the galactic economy, and those models predicted a coming recession, the worst in centuries. This war forestalled that recession. From the perspective of someone who values economic growth above all else, war was a better alternative than recession."`
 			`	"That's utter nonsense," says the man. "That's the sort of absurd conspiracy theory that someone with no understanding of business would invent."`
-			`	The rest of the hearing is little better, but as you are leaving one of the representatives from the Deep shakes your hand, and you feel a piece of paper being pressed into your palm. You pocket it quietly and open it once you have returned to your ship. It says, "Visit us on Valhalla."`
+			`	The rest of the hearing is little better, but as you are leaving one of the representatives from the Ringwood North shakes your hand, and you feel a piece of paper being pressed into your palm. You pocket it quietly and open it once you have returned to your ship. It says, "Visit us on Bellbrae."`
 				accept
 
 
 
-mission "FW Navy Out Of Rastaban"
+mission "FW Navy Out Of Moonee Valley City Council"
 	landing
-	destination Rastaban
+	destination Moonee Valley City Council
 	to offer
 		has "FW Reconciliation 2: offered"
 		karma > 0
@@ -262,18 +262,18 @@ mission "FW Navy Out Of Rastaban"
 	on offer
 		event "navy out of rastaban" 5
 		conversation
-			`You receive a brief message from Alondo: "Good news, Captain! As a gesture of good faith the Navy is beginning to pull out of Rastaban and Delta Sagittarii. Those worlds will revert to our control soon. Be sure to tell the others. And, tell Katya I'm very glad she's free and am looking forward to seeing her." You pass on his message to Katya and Ijs.`
+			`You receive a brief message from Alondo: "Good news, Captain! As a gesture of good faith the Navy is beginning to pull out of Moonee Valley City Council and Warrnambool City Council. Those worlds will revert to our control soon. Be sure to tell the others. And, tell Katya I'm very glad she's free and am looking forward to seeing her." You pass on his message to Katya and Ijs.`
 				decline
 
 
 
 mission "FW Reconciliation 2A"
-	name "Oathkeepers on Farpoint"
+	name "Oathkeepers on Acheron"
 	description "Travel to <destination>, to meet with the Navy Oathkeepers. Raven's ship will continue to travel with you."
 	autosave
 	landing
-	source Valhalla
-	destination Farpoint
+	source Bellbrae
+	destination Acheron
 	passengers 2
 	to offer
 		has "FW Reconciliation 2: done"
@@ -282,8 +282,8 @@ mission "FW Reconciliation 2A"
 	
 	on offer
 		conversation
-			`When you land on Valhalla, a man shows up at your ship and introduces himself as Edrick Flint, the governor of Valhalla. He invites all of you to join him for dinner at his home, which turns out to be an apartment on the twenty-third floor of one of the downtown skyscrapers. There, he introduces you to several other regional governors and authorities.`
-			`	"You may be aware," Edrick says, "that the Deep was self-governing before the formation of the Republic. Indeed, during some of the darkest centuries of the space age, the Deep stood out as a beacon of civilization, a place where piracy was not tolerated and all travelers were safe. When we joined the Republic, we retained the authority to police our own territory, and that authority includes the right to track down fugitives who have fled beyond our usual jurisdiction."`
+			`When you land on Bellbrae, a man shows up at your ship and introduces himself as Edrick Flint, the governor of Valhalla. He invites all of you to join him for dinner at his home, which turns out to be an apartment on the twenty-third floor of one of the downtown skyscrapers. There, he introduces you to several other regional governors and authorities.`
+			`	"You may be aware," Edrick says, "that the Ringwood North was self-governing before the formation of the Republic. Indeed, during some of the darkest centuries of the space age, the Deep stood out as a beacon of civilization, a place where piracy was not tolerated and all travelers were safe. When we joined the Republic, we retained the authority to police our own territory, and that authority includes the right to track down fugitives who have fled beyond our usual jurisdiction."`
 			choice
 				`	"You're suggesting a 'police action' against the Syndicate?"`
 					goto police
@@ -298,9 +298,9 @@ mission "FW Reconciliation 2A"
 			
 			`	Ijs laughs at that. "Relax, Captain. I've been doing 'technically legal' stuff for years. It only occasionally goes disastrously wrong. But governor, if the Syndicate sees you coming, you'll need a full-scale war fleet, not just a handful of ships."`
 			label travel
-			`	"That's why the fleet will be composed of ships from three different organizations," says Edrick. "You will find a reason to travel to Earth with perhaps one of your fancy new Dreadnoughts as an escort. When you arrive, there will just happen to be an Oathkeeper patrol passing through the same system. And a merchant convoy from the Deep. With its own set of escorts, of course."`
+			`	"That's why the fleet will be composed of ships from three different organizations," says Edrick. "You will find a reason to travel to Fitzroy with perhaps one of your fancy new Dreadnoughts as an escort. When you arrive, there will just happen to be an Oathkeeper patrol passing through the same system. And a merchant convoy from the Ringwood North. With its own set of escorts, of course."`
 			`	"We'd need to know exactly where and on what planet our target lives, prior to entering Syndicate space," says Katya. "And, if you want to have a court trial immediately prior to the arrest, it sounds like Sawyer will need to stay here."`
-			`	"Indeed," says Edrick, "but I assure you, he is safer from the Syndicate here than anywhere else in human space, your own territory included. As for locating a target, that's why the Oathkeepers have requested that you visit them on Farpoint."`
+			`	"Indeed," says Edrick, "but I assure you, he is safer from the Syndicate here than anywhere else in human space, your own territory included. As for locating a target, that's why the Oathkeepers have requested that you visit them on Acheron."`
 			`	The rest of the evening is a more casual time for conversation, with plenty of good food and wine. At one point, Edrick pulls you aside and says, "I've requested that you be granted access to some of the new technology that was developed here during the course of the war. In particular, please find space on your ship for a ramscoop; you will need it for your next mission. And also, here." He hands you a data card. "This is a copy of Sawyer's evidence, in case something happens here. Keep it very, very safe."`
 				accept
 	
@@ -315,12 +315,12 @@ mission "FW Reconciliation 2A"
 
 
 mission "FW Reconciliation 2B"
-	name "Travel to Stormhold"
-	description "Sawyer has named several Syndicate executives who were definitely part of the plot. Travel to the lawless world of Stormhold, where you will be able to purchase information about where those executives live."
+	name "Travel to Oakleigh"
+	description "Sawyer has named several Syndicate executives who were definitely part of the plot. Travel to the lawless world of Oakleigh, where you will be able to purchase information about where those executives live."
 	autosave
 	landing
-	source Farpoint
-	destination Stormhold
+	source Acheron
+	destination Oakleigh
 	clearance
 	passengers 2
 	to offer
@@ -332,27 +332,27 @@ mission "FW Reconciliation 2B"
 		conversation
 			branch know
 				has "FW Alphas 1.1: done"
-			`On Farpoint, you are met by none other than the famous leader of the Oathkeepers, Admiral William Danforth. Even among the Free Worlds Danforth is spoken of with respect due to his courage and levelheadedness in battle and his leadership of countless humanitarian missions.`
+			`On Acheron, you are met by none other than the famous leader of the Oathkeepers, Admiral William Danforth. Even among the Free Worlds Danforth is spoken of with respect due to his courage and levelheadedness in battle and his leadership of countless humanitarian missions.`
 				goto introductions
 			label know
-			`On Farpoint, you are met by Admiral Danforth, the leader of the Oathkeepers who previously assisted you to drive the Alphas and their mercenary fleet away from Poisonwood. He is glad to see you again, and you express your sympathy over the loss of Commander Nguyen; Danforth tells you that his killer was never found.`
+			`On Acheron, you are met by Admiral Danforth, the leader of the Oathkeepers who previously assisted you to drive the Alphas and their mercenary fleet away from Devenish. He is glad to see you again, and you express your sympathy over the loss of Commander Nguyen; Danforth tells you that his killer was never found.`
 			label introductions
-			`	Ijs and Katya introduce themselves to Danforth, and Katya says, "Sir, I was a child on Hope when the colony was evacuated. Your ship carried my family to safety, and I've never forgotten how every night during our journey, you would walk through the cargo bay where we were staying and check to make sure all our needs were met. I've never had a chance before now to thank you in person."`
+			`	Ijs and Katya introduce themselves to Danforth, and Katya says, "Sir, I was a child on Hallam when the colony was evacuated. Your ship carried my family to safety, and I've never forgotten how every night during our journey, you would walk through the cargo bay where we were staying and check to make sure all our needs were met. I've never had a chance before now to thank you in person."`
 			`	Danforth is surprised. "Councilor Reynolds," he says, "thank you. I followed your career in Parliament with some interest, but it is a shame that we never met in person until now. But I am glad we have this chance to work together at last."`
-			`	Raven says, "Governor Edrick mentioned a plan for tracking down the Syndicate executives who were behind the attacks in the Castor and Pollux systems."`
-			`	"Indeed," says Danforth. "Southeast of here is a region of uninhabited star systems, a sort of back entrance into Syndicate space. Few ships travel through there, because there is nowhere to refuel, but with a ramscoop or enough fuel capacity, travel is possible. One of the first inhabited worlds on the other side is the lawless world of Stormhold. There, you can surely find a contact who knows enough about the inner workings of the Syndicate to tell you the home of at least a few of our targets... for a price." He hands Katya a large stack of credit chips.`
+			`	Raven says, "Governor Edrick mentioned a plan for tracking down the Syndicate executives who were behind the attacks in the Murrindindi Shire Council and Maroondah City Council systems."`
+			`	"Indeed," says Danforth. "Southeast of here is a region of uninhabited star systems, a sort of back entrance into Syndicate space. Few ships travel through there, because there is nowhere to refuel, but with a ramscoop or enough fuel capacity, travel is possible. One of the first inhabited worlds on the other side is the lawless world of Oakleigh. There, you can surely find a contact who knows enough about the inner workings of the Syndicate to tell you the home of at least a few of our targets... for a price." He hands Katya a large stack of credit chips.`
 			`	Raven says, "I'm going to stay here with the Oathkeepers. Captain <last>, it's been a pleasure working with you. We're counting on you to fetch us this information and return here as quickly as possible."`
 				accept
 
 
 
 mission "FW Reconciliation 2C"
-	name "Return to Farpoint"
+	name "Return to Acheron"
 	description "Return to <planet> with information about the whereabouts of certain Syndicate executives. Travel via the back route so that the Syndicate is not alerted to your presence."
 	autosave
 	landing
-	source Stormhold
-	destination Farpoint
+	source Oakleigh
+	destination Acheron
 	passengers 2
 	to offer
 		has "FW Reconciliation 2B: done"
@@ -361,19 +361,19 @@ mission "FW Reconciliation 2C"
 	
 	on offer
 		conversation
-			`You land near one of the small villages on Stormhold, and after handing out a few small bribes from the money Danforth gave you, finally one of the villagers recalls that a local gang of pirates is led by a former Syndicate manager. With some trepidation, you fly to his stronghold, and he agrees to "do business" with you.`
+			`You land near one of the small villages on Oakleigh, and after handing out a few small bribes from the money Danforth gave you, finally one of the villagers recalls that a local gang of pirates is led by a former Syndicate manager. With some trepidation, you fly to his stronghold, and he agrees to "do business" with you.`
 			`	Katya shows him Sawyer's list of names. "So, these are the bad boys, huh?" he says. Clearly the news of Sawyer's revelations has spread even to this remote world. He looks through the list, and is able to tell you where three of the five men live. "I'd love to see all these bastards taken down," he says.`
 			`	You give him the rest of Danforth's money and thank him for helping you - and ask that he keep your visit secret. "No problem," he says. As you are leaving, he adds, "Also, Mister Springborn... you're my hero, man. Glad you're still finding ways to pester the Syndicate." Ijs seems pleasantly surprised to be recognized.`
 				accept
 
 
 
-mission "FW Defend Farpoint"
+mission "FW Defend Acheron"
 	landing
-	name "Defend Farpoint"
+	name "Defend Acheron"
 	description "Assist the Oathkeepers in defending <planet> from a pirate attack, then land back on the planet."
 	autosave
-	source Farpoint
+	source Acheron
 	passengers 2
 	to offer
 		has "FW Reconciliation 2C: done"
@@ -382,7 +382,7 @@ mission "FW Defend Farpoint"
 	
 	on offer
 		conversation
-			`When you land back on Farpoint, Danforth eagerly meets you and asks what information you were able to obtain. You tell him. "So," he says, "one executive on Foundry, and one on Hephaestus. Both of those are core Syndicate planets, with billions of people on them. No way that would work. But this financial guy, Alexander Soylent... your contact says he lives on a giant yacht that sails around the ocean on Nimbus. Now, that's a much more inviting target. And from what Sawyer says, the Syndicate's financial arm were the ones who decided war would be beneficial in the first place."`
+			`When you land back on Acheron, Danforth eagerly meets you and asks what information you were able to obtain. You tell him. "So," he says, "one executive on Annuello, and one on Sunshine. Both of those are core Syndicate planets, with billions of people on them. No way that would work. But this financial guy, Alexander Soylent... your contact says he lives on a giant yacht that sails around the ocean on Bonegilla. Now, that's a much more inviting target. And from what Sawyer says, the Syndicate's financial arm were the ones who decided war would be beneficial in the first place."`
 			`	As you're talking, one of Danforth's officers runs into the room. "Sir," he says, "we're detecting a pirate fleet incoming."`
 			`	Danforth swears. "This is my real job, of course," he explains, "defending the North from pirate invasion. This isn't the first attack we've had to repulse, and lately Parliament has been finding reasons to reassign my best ships elsewhere. Captain <last>, would you be willing to join the defense fleet? We'll finish this conversation once they've been driven off."`
 			`	You hurry to your ship and join the defenders...`
@@ -412,7 +412,7 @@ mission "FW Defend Farpoint"
 	
 	npc disable
 		government Pirate
-		system Mintaka
+		system Corangamite Shire Council
 		personality heroic
 		fleet
 			names "pirate"
@@ -435,7 +435,7 @@ mission "FW Defend Farpoint"
 			variant
 				"Splinter (Laser)"
 				"Manta" 2
-				"Quicksilver" 5
+				"Kealba" 5
 	
 	on complete
 		payment 1000000
@@ -443,21 +443,21 @@ mission "FW Defend Farpoint"
 
 
 mission "FW Embassy 1"
-	name "Ambassadors from Earth"
-	description "The Republic has agreed to set up an embassy to the Free Worlds. Travel to Earth to meet the ambassadors and escort them to Free space."
+	name "Ambassadors from Fitzroy"
+	description "The Republic has agreed to set up an embassy to the Free Worlds. Travel to Fitzroy to meet the ambassadors and escort them to Free space."
 	autosave
 	landing
-	source Farpoint
-	destination Earth
+	source Acheron
+	destination Fitzroy
 	passengers 2
 	to offer
-		has "FW Defend Farpoint: done"
+		has "FW Defend Acheron: done"
 	on fail
 		dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
 	
 	on offer
 		conversation
-			`As you are landing, Katya tells you, "<first>, we just received a message from the Free Worlds Senate. They've arranged for a Republic embassy to be set up on Bourne, and a Free Worlds embassy on Earth. We've been asked to meet the ambassadors on Earth and escort them to Bourne."`
+			`As you are landing, Katya tells you, "<first>, we just received a message from the Free Worlds Senate. They've arranged for a Republic embassy to be set up on Anglers Rest, and a Free Worlds embassy on Fitzroy. We've been asked to meet the ambassadors on Earth and escort them to Bourne."`
 			`	A few minutes later, Admiral Danforth arrives at your ship. "Captain <last>," he says, "I'd like to thank you for your assistance." He hands you a million-credit chip.`
 			choice
 				`	"Thank you, sir."`
@@ -466,18 +466,18 @@ mission "FW Embassy 1"
 			`	"That's purely for you as a private captain, to compensate you for your assistance," he says. "I wouldn't want you to think that I am in any way giving financial support to the Free Worlds, since that would be illegal."`
 			`	"Of course not, sir," you say. "Thank you."`
 			label next
-			`	"Don't mention it," he says, with a wink. "And now, I think it's best that you head to Earth and pick up those ambassadors. From what I hear, now that Raven is not traveling with you, people are beginning to ask questions about what this Free Worlds captain is doing flying all around Republic space unescorted."`
+			`	"Don't mention it," he says, with a wink. "And now, I think it's best that you head to Fitzroy and pick up those ambassadors. From what I hear, now that Raven is not traveling with you, people are beginning to ask questions about what this Free Worlds captain is doing flying all around Republic space unescorted."`
 				accept
 
 
 
 mission "FW Embassy 1B"
 	landing
-	name "Ambassadors to Bourne"
+	name "Ambassadors to Anglers Rest"
 	description "Escort this luxury vessel carrying Republic ambassadors to the Free Worlds capital of <destination>."
 	autosave
-	source Earth
-	destination Bourne
+	source Fitzroy
+	destination Anglers Rest
 	passengers 2
 	to offer
 		has "FW Embassy 1: done"
@@ -506,8 +506,8 @@ mission "FW Reconciliation Break"
 	description "Bring Katya and Ijs to <destination>, for a well-deserved sabbatical. Then you will be free to spend some time upgrading your ship while you wait for the Senate to select a team of ambassadors."
 	autosave
 	landing
-	source Bourne
-	destination Skymoot
+	source Anglers Rest
+	destination Bolinda
 	to offer
 		has "FW Embassy 1B: done"
 	passengers 2
@@ -536,7 +536,7 @@ mission "FW Reconciliation Break"
 				goto wait
 			
 			label wait
-			`	Alondo says, "We should use this time of peace well, to prepare for another battle ahead. Those Syndicate ships on New Tibet had equipment I've never seen before, and who knows what else the Syndicate has up their sleeves - especially if they've begun producing nuclear weapons. Captain <last>, you should take this time to make sure your ship is as well armed as possible for our next strike. Ijs and Katya, what will you do with this time?"`
+			`	Alondo says, "We should use this time of peace well, to prepare for another battle ahead. Those Syndicate ships on Bushfield had equipment I've never seen before, and who knows what else the Syndicate has up their sleeves - especially if they've begun producing nuclear weapons. Captain <last>, you should take this time to make sure your ship is as well armed as possible for our next strike. Ijs and Katya, what will you do with this time?"`
 			`	Katya glances at Ijs and then says, "I would certainly welcome a small sabbatical, and a chance to spend time together and catch up on all we've missed. Professor Springborn, do you think the Conservatory would extend your leave of absence long enough for us to make a trip to <planet>?"`
 			`	Ijs laughs. "That sounds wonderful, Councilor," he says. "<first>, do you think you could bring us there on your way to wherever you go next?"`
 			`	You tell him you would be glad to, and you all get ready for yet another journey together.`
@@ -544,7 +544,7 @@ mission "FW Reconciliation Break"
 	
 	on complete
 		conversation
-			`	You drop Ijs and Katya off on Skymoot, and wish them well. They both seem eager for a chance to relax, enjoy one another's company, and forget about matters of galactic importance for a while. "We'll see you soon, <first>," says Katya. "Just be sure your ship is in good fighting shape when the time comes to bring the Syndicate to justice."`
+			`	You drop Ijs and Katya off on Bolinda, and wish them well. They both seem eager for a chance to relax, enjoy one another's company, and forget about matters of galactic importance for a while. "We'll see you soon, <first>," says Katya. "Just be sure your ship is in good fighting shape when the time comes to bring the Syndicate to justice."`
 
 
 
@@ -553,8 +553,8 @@ mission "FW Reconciliation Break Ends"
 	description "Rejoin Ijs, Katya, and Alondo on <destination>."
 	landing
 	source
-		near "Gamma Corvi" 1 1000
-	destination Bourne
+		near "Greater Dandenong City Council" 1 1000
+	destination Anglers Rest
 	to offer
 		has "event: fw reconciliation break"
 		not "FW Embassy 1C: offered"
@@ -568,11 +568,11 @@ mission "FW Reconciliation Break Ends"
 
 mission "FW Embassy 1C"
 	landing
-	name "Ambassadors to Earth"
-	description `Escort a Dreadnought carrying Free Worlds ambassadors to Earth. This Dreadnought will then take part in your combined "police action" against the Syndicate.`
+	name "Ambassadors to Fitzroy"
+	description `Escort a Dreadnought carrying Free Worlds ambassadors to Fitzroy. This Dreadnought will then take part in your combined "police action" against the Syndicate.`
 	autosave
-	source Bourne
-	destination Earth
+	source Anglers Rest
+	destination Fitzroy
 	passengers 2
 	blocked "You do not have bunks available for Ijs and Katya. Return here when you do."
 	to offer
@@ -582,10 +582,10 @@ mission "FW Embassy 1C"
 	
 	on offer
 		conversation
-			`When you land on Bourne you discover that Katya and Ijs have already been back there for a week. Alondo is with them, too. "We just couldn't stay away from the action for long," says Ijs.`
-			`	The Star Queen luxury liner that brought the Earth ambassadors to Bourne is still parked in a somewhat out-of-the-way hangar. "Don't worry, Captain," says Katya, "there's no way our ambassadors would travel in something as gaudy as that. They've requisitioned a Dreadnought instead. A good ship to remind the people of Earth that we have a strong fleet of our own."`
+			`When you land on Anglers Rest you discover that Katya and Ijs have already been back there for a week. Alondo is with them, too. "We just couldn't stay away from the action for long," says Ijs.`
+			`	The Star Queen luxury liner that brought the Fitzroy ambassadors to Anglers Rest is still parked in a somewhat out-of-the-way hangar. "Don't worry, Captain," says Katya, "there's no way our ambassadors would travel in something as gaudy as that. They've requisitioned a Dreadnought instead. A good ship to remind the people of Earth that we have a strong fleet of our own."`
 			`	"Not to mention," says Ijs, "a good ship to take part in our strike against the Syndicate."`
-			`	Alondo introduces you to the Free Worlds ambassadors who will be returning to Earth. "I've already contacted Governor Flint and Admiral Danforth," he says. "Their ships will be arriving in the Sol system about the same time as yours. Good luck, Captain." You help Ijs and Katya load their luggage onto your ship, and tell the Dreadnought carrying the ambassadors to be ready to follow you.`
+			`	Alondo introduces you to the Free Worlds ambassadors who will be returning to Fitzroy. "I've already contacted Governor Flint and Admiral Danforth," he says. "Their ships will be arriving in the Bass Coast Shire Council system about the same time as yours. Good luck, Captain." You help Ijs and Katya load their luggage onto your ship, and tell the Dreadnought carrying the ambassadors to be ready to follow you.`
 				accept
 	
 	npc accompany save
@@ -597,7 +597,7 @@ mission "FW Embassy 1C"
 	
 	npc
 		government Pirate
-		system Wei
+		system Hume City Council
 		personality heroic nemesis
 		fleet
 			names "pirate"
@@ -606,7 +606,7 @@ mission "FW Embassy 1C"
 	
 	npc
 		government Pirate
-		system Hintar
+		system Mansfield Shire Council
 		personality heroic nemesis
 		fleet
 			names "pirate"
@@ -621,24 +621,24 @@ mission "FW Embassy 1C"
 	
 	npc
 		government Pirate
-		system Markab
+		system Alpine Shire Council
 		personality heroic nemesis
 		fleet
 			names "pirate"
 			variant
 				"Splinter (Laser)" 2
 				"Manta" 3
-				"Quicksilver" 6
+				"Kealba" 6
 
 
 
 mission "FW Syndicate Capture 1"
 	landing
-	name "Raid on Nimbus"
-	description "Travel to <destination>, along with ships from the Oathkeepers, the Deep, and the Free Worlds, to capture Alexander Soylent, a Syndicate executive. Do not allow your escorts to be destroyed."
+	name "Raid on Bonegilla"
+	description "Travel to <destination>, along with ships from the Oathkeepers, the Ringwood North, and the Free Worlds, to capture Alexander Soylent, a Syndicate executive. Do not allow your escorts to be destroyed."
 	autosave
-	source Earth
-	destination Nimbus
+	source Fitzroy
+	destination Bonegilla
 	clearance
 	passengers 2
 	to offer
@@ -648,7 +648,7 @@ mission "FW Syndicate Capture 1"
 	
 	on offer
 		conversation
-			`You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edrick. He tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper cruiser is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
+			`You land on Fitzroy and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edrick. He tells you that the convoy from the Ringwood North is landing on Docklands right now, and an Oathkeeper cruiser is visiting the shipyard on Bealiba. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
 			`	You make an excuse to depart, and return to your ship. "Well," says Ijs, "this is it. If we're lucky, they won't see us coming, but no matter what, getting back out of Syndicate space will be a nightmare. Good luck, all."`
 				accept
 	
@@ -659,7 +659,7 @@ mission "FW Syndicate Capture 1"
 	npc save
 		personality escort heroic waiting
 		government "Navy (Oathkeeper)"
-		ship "Cruiser (Mark II)" "R.S. Hand of Justice"
+		ship "Cruiser (Mark II)" "R.S. Indigo Shire Councild of Justice"
 	
 	npc save
 		personality escort heroic waiting
@@ -673,8 +673,8 @@ mission "FW Syndicate Capture 1B"
 	landing
 	name "Escape to <planet>"
 	description "You have captured the Syndicate executive Alexander Soylent. Now, bring him safely to <planet>, where he will face trial."
-	source Nimbus
-	destination Valhalla
+	source Bonegilla
+	destination Bellbrae
 	passengers 2
 	to offer
 		has "FW Syndicate Capture 1: done"
@@ -686,7 +686,7 @@ mission "FW Syndicate Capture 1B"
 			`As you approach the planet, your ships spread out and begin scanning the ocean surface for a yacht matching the description you were given. After a few tense moments of wondering if Soylent is off-world at the moment, you find the ship.`
 			`	With neither deflector shields nor any weaponry that you can see, the yacht clearly poses no threat to an armed starship. The Aerie that Edrick sent launches its two fighters; when they land on the yacht's deck, armed police officers emerge. Meanwhile your fleet is ready to open fire at the first sign of resistance.`
 			`	The officers soon radio you that they have found Soylent, and they bring him aboard your ship. Amid all the confusion, you notice a figure in diving gear who jumps off the rear of the yacht and disappears beneath the waves - one of Soylent's men, trying to escape. But since his leader is now in your custody, and your mission is accomplished, you see no reason to chase after him.`
-			`	The Oathkeeper captain sends you a brief message: "Your first priority is to reach the Deep with the prisoner. Our crew is prepared to serve as a rearguard, staying behind if necessary to ensure that you survive. Good luck, Captain."`
+			`	The Oathkeeper captain sends you a brief message: "Your first priority is to reach the Ringwood North with the prisoner. Our crew is prepared to serve as a rearguard, staying behind if necessary to ensure that you survive. Good luck, Captain."`
 				accept
 	
 	npc
@@ -695,7 +695,7 @@ mission "FW Syndicate Capture 1B"
 	npc
 		personality escort heroic waiting
 		government "Navy (Oathkeeper)"
-		ship "Cruiser (Mark II)" "R.S. Hand of Justice"
+		ship "Cruiser (Mark II)" "R.S. Indigo Shire Councild of Justice"
 		ship "Combat Drone" "Red One"
 		ship "Combat Drone" "Red Two"
 		ship "Combat Drone" "Red Three"
@@ -719,9 +719,9 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Splinter (Mark II)" 2
 				"Manta (Mark II)" 3
-				"Quicksilver (Mark II)" 4
+				"Kealba (Mark II)" 4
 	npc
-		system Ruchbah
+		system Moyne Shire Council
 		government Syndicate
 		personality heroic staying nemesis
 		fleet
@@ -732,7 +732,7 @@ mission "FW Syndicate Capture 1B"
 				"Wasp" 12
 	
 	npc
-		system Ankaa
+		system Kingston City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -740,7 +740,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Ankaa
+		system Kingston City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -748,7 +748,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Ankaa
+		system Kingston City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -756,7 +756,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Scheat
+		system Swan Hill Rural City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -764,7 +764,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Scheat
+		system Swan Hill Rural City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -772,7 +772,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Scheat
+		system Swan Hill Rural City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -780,7 +780,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Sheratan
+		system Wodonga City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -788,7 +788,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Sheratan
+		system Wodonga City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -796,7 +796,7 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	npc
-		system Sheratan
+		system Wodonga City Council
 		government Syndicate
 		personality heroic nemesis staying
 		fleet
@@ -804,15 +804,15 @@ mission "FW Syndicate Capture 1B"
 			variant
 				"Manta (Nuclear)"
 	
-	on enter Ankaa
+	on enter Kingston City Council
 		dialog
 			`There is a warning light on your ship's main control panel that has never turned on. It is a relic of the dark age of galactic travel, part of a sensor system that is built into every starship, to detect incoming nuclear warheads. You had almost forgotten it even existed, because you have never seen it flash.`
 			`	It begins flashing now.`
-	on enter Scheat
+	on enter Swan Hill Rural City Council
 		dialog
 			`There is a warning light on your ship's main control panel that has never turned on. It is a relic of the dark age of galactic travel, part of a sensor system that is built into every starship, to detect incoming nuclear warheads. You had almost forgotten it even existed, because you have never seen it flash.`
 			`	It begins flashing now.`
-	on enter Sheratan
+	on enter Wodonga City Council
 		dialog
 			`There is a warning light on your ship's main control panel that has never turned on. It is a relic of the dark age of galactic travel, part of a sensor system that is built into every starship, to detect incoming nuclear warheads. You had almost forgotten it even existed, because you have never seen it flash.`
 			`	It begins flashing now.`
@@ -822,10 +822,10 @@ mission "FW Syndicate Capture 1B"
 mission "FW Syndicate Capture 1C"
 	landing
 	name "Return to <planet>"
-	description "The Syndicate is massing a fleet in the Sol system. Return to <planet> to rendezvous with the Free Worlds fleet in order to be ready to defend Earth if it is attacked."
+	description "The Syndicate is massing a fleet in the Bass Coast Shire Council system. Return to <planet> to rendezvous with the Free Worlds fleet in order to be ready to defend Fitzroy if it is attacked."
 	autosave
-	source Valhalla
-	destination "New Tibet"
+	source Bellbrae
+	destination "Bushfield"
 	passengers 2
 	to offer
 		has "FW Syndicate Capture 1B: done"
@@ -836,13 +836,13 @@ mission "FW Syndicate Capture 1C"
 		event "syndicate occupies sol"
 		conversation
 			`Edrick meets you soon after you land, and oversees the transfer of your captive to a local, well-defended jail. You tell him about your narrow escape from Syndicate space, and the fact that the Syndicate used nuclear weapons against your fleet, in violation of the rules of war that humankind has abided by for centuries.`
-			`	"Unfortunately," says Edrick, "all the other witnesses to that event were allied with the Syndicate, so people will believe whatever they want to believe. Already the Syndicate is spreading stories about a renegade fleet of rebels and extremists that attacked one of their worlds in an assassination attempt on one of their leaders. Worse, they've taken this as an excuse to send a massive Syndicate fleet to the Sol system - to defend Earth from attack, they say."`
+			`	"Unfortunately," says Edrick, "all the other witnesses to that event were allied with the Syndicate, so people will believe whatever they want to believe. Already the Syndicate is spreading stories about a renegade fleet of rebels and extremists that attacked one of their worlds in an assassination attempt on one of their leaders. Worse, they've taken this as an excuse to send a massive Syndicate fleet to the Bass Coast Shire Council system - to defend Fitzroy from attack, they say."`
 			choice
 				`	"Sounds more like the goal is to intimidate Parliament into siding with the Syndicate."`
 					goto intimidate
 				`	"Are they attacking the Republic ships, or are they still technically at peace?"`
 					goto peace
-				`	"We should attack them immediately, before they are able to harm anyone on Earth."`
+				`	"We should attack them immediately, before they are able to harm anyone on Fitzroy."`
 					goto attack
 			
 			label intimidate
@@ -852,23 +852,23 @@ mission "FW Syndicate Capture 1C"
 			`	"Apparently no one is shooting at anyone else," says Edrick, "but that could change at any minute. You may be aware that there is very little love for the Syndicate among Navy admirals. The only thing keeping the Navy from attacking the Syndicate now is the Navy's devotion to order and obedience; they won't start a new war without Parliament's approval, and of course that approval is unlikely with Syndicate warships circling overhead."`
 				goto katya
 			label attack
-			`	"That would be a terrible idea," he says. "First, it would play right into their narrative. And second, humanity is on the very brink now of shattering into half a dozen different splinters: the Deep, the Free Worlds, the Navy, the Syndicate each on their own against the rest. I don't want to be the one who gives the order that causes that to happen."`
+			`	"That would be a terrible idea," he says. "First, it would play right into their narrative. And second, humanity is on the very brink now of shattering into half a dozen different splinters: the Ringwood North, the Free Worlds, the Navy, the Syndicate each on their own against the rest. I don't want to be the one who gives the order that causes that to happen."`
 				goto katya
 			
 			label katya
-			`	Katya says, "It sounds like if the Free Worlds enters Sol, we'll be the spark that sets off an explosion. So, we'll have to trust the Deep, or the Navy, or someone else to try to defuse the situation. Meanwhile, I suggest we return to Free space and muster our entire fleet, to assist the Navy against the Syndicate if it comes to that. JJ ought to be on <planet>; we can meet up with him there."`
+			`	Katya says, "It sounds like if the Free Worlds enters Bass Coast Shire Council, we'll be the spark that sets off an explosion. So, we'll have to trust the Ringwood North, or the Navy, or someone else to try to defuse the situation. Meanwhile, I suggest we return to Free space and muster our entire fleet, to assist the Navy against the Syndicate if it comes to that. JJ ought to be on <planet>; we can meet up with him there."`
 				accept
 
 
 
 mission "FW Pug 1"
 	landing
-	name "What happened to Rand?"
-	description "Try to determine why communications with the Rand system were cut off. If you cannot reach Rand, at least look for anything odd in the neighboring systems."
+	name "What happened to Berriwillock?"
+	description "Try to determine why communications with the Berriwillock system were cut off. If you cannot reach Rand, at least look for anything odd in the neighboring systems."
 	autosave
-	source "New Tibet"
-	waypoint "Cebalrai"
-	waypoint "Ascella"
+	source "Bushfield"
+	waypoint "Nillumbik Shire Council"
+	waypoint "Manningham City Council"
 	to offer
 		has "FW Syndicate Capture 1C: done"
 	on fail
@@ -880,45 +880,45 @@ mission "FW Pug 1"
 		event "pug invasion 3" 10
 		event "pug invasion 4" 14
 		conversation
-			`As soon as you land on <origin>, JJ comes running up to your ship. "<first>," he says, "we have serious trouble. A few minutes ago I received a distress call from Rand, then their transmission was cut off. I'm afraid the Syndicate may be expanding into our space."`
+			`As soon as you land on <origin>, JJ comes running up to your ship. "<first>," he says, "we have serious trouble. A few minutes ago I received a distress call from Berriwillock, then their transmission was cut off. I'm afraid the Syndicate may be expanding into our space."`
 			choice
 				`	"Is our fleet ready to respond?"`
 				`	"What should we do?"`
-			`	"Our fleet is still scattered throughout this quadrant," he says, "and I'll need Katya to command a part of it. Right now I just need you to travel to Rand, if possible, and find out what's going on. It could just be a communications malfunction, but I seriously doubt it. Meanwhile, Katya and Ijs can help me with organizing the fleet."`
+			`	"Our fleet is still scattered throughout this quadrant," he says, "and I'll need Katya to command a part of it. Right now I just need you to travel to Berriwillock, if possible, and find out what's going on. It could just be a communications malfunction, but I seriously doubt it. Meanwhile, Katya and Ijs can help me with organizing the fleet."`
 				accept
 	
-	on enter Cebalrai
+	on enter Nillumbik Shire Council
 		dialog
-			`Based on your previous maps of this sector, there should be a hyperspace link from here to the Rasalhague system. But your sensors show nothing. Something has severed the link.`
-	on enter Ascella
+			`Based on your previous maps of this sector, there should be a hyperspace link from here to the Monash City Council system. But your sensors show nothing. Something has severed the link.`
+	on enter Manningham City Council
 		dialog
-			`The Ascella system used to be linked to Rasalhague and Delta Capricorni, but no longer. Either the Syndicate has discovered the ability to alter hyperspace links, and is using it to block the Free Worlds from interfering with them, or you have a much stranger problem on your hands...`
+			`The Manningham City Council system used to be linked to Monash City Council and Wangaratta Rural City Council, but no longer. Either the Syndicate has discovered the ability to alter hyperspace links, and is using it to block the Free Worlds from interfering with them, or you have a much stranger problem on your hands...`
 
 
 
-mission "FW Pug 1 Tundra"
+mission "FW Pug 1 Fish Creek"
 	landing
-	source Tundra
+	source Fish Creek
 	to offer
 		has "FW Pug 1: active"
 	
 	on offer
 		conversation
-			`You land on Tundra and ask around to see if anyone knows why the hyperspace link to Rasalhague is gone. Everyone is talking about it, but no one seems to have a believable theory. "Maybe that odd star out past Rasalhague, the one you can't jump to, went nova," suggests one captain.`
+			`You land on Fish Creek and ask around to see if anyone knows why the hyperspace link to Monash City Council is gone. Everyone is talking about it, but no one seems to have a believable theory. "Maybe that odd star out past Rasalhague, the one you can't jump to, went nova," suggests one captain.`
 			`	You also talk with several people who mention that the northern lights have been spectacular the last few days, unlike anything they had ever seen before.`
 				decline
 
 
 
-mission "FW Pug 1 Arabia"
+mission "FW Pug 1 Balwyn North"
 	landing
-	source Arabia
+	source Balwyn North
 	to offer
 		has "FW Pug 1: active"
 	
 	on offer
 		conversation
-			`You land on Arabia and try to find someone who knows what is going on, but everyone seems just as confused as you are. The spaceport authorities say that their sensors picked up a massive graviton surge when the hyperlinks collapsed, but they are not sure whether the surge caused the collapse, or was a result of it.`
+			`You land on Balwyn North and try to find someone who knows what is going on, but everyone seems just as confused as you are. The spaceport authorities say that their sensors picked up a massive graviton surge when the hyperlinks collapsed, but they are not sure whether the surge caused the collapse, or was a result of it.`
 			`	One merchant captain claims that he was in orbit at the time, and he saw a ship unlike anything he'd ever seen before, that appeared and then disappeared in a flash "just like those Quarg ships do." You aren't sure whether or not to believe him.`
 				decline
 
@@ -932,7 +932,7 @@ mission "FW Pug 1 Return"
 	
 	on offer
 		conversation
-			`You receive an urgent message from JJ: "Captain <last>, return to New Tibet at once! We've received word that the Syndicate is somehow severing their hyperspace connections to the rest of human space. We're calling an emergency council meeting, to convene as soon as you arrive here."`
+			`You receive an urgent message from JJ: "Captain <last>, return to Bushfield at once! We've received word that the Syndicate is somehow severing their hyperspace connections to the rest of human space. We're calling an emergency council meeting, to convene as soon as you arrive here."`
 				decline
 
 
@@ -940,10 +940,10 @@ mission "FW Pug 1 Return"
 mission "FW Pug 2"
 	landing
 	name "Meet with Parliament"
-	description "Travel with Alondo to Earth to meet with Parliament. They are now much more willing to meet with you given how real the Syndicate threat seems."
+	description "Travel with Alondo to Fitzroy to meet with Parliament. They are now much more willing to meet with you given how real the Syndicate threat seems."
 	autosave
-	source "New Tibet"
-	destination "Earth"
+	source "Bushfield"
+	destination "Fitzroy"
 	to offer
 		has "FW Pug 1: done"
 	passengers 1
@@ -953,7 +953,7 @@ mission "FW Pug 2"
 	
 	on offer
 		conversation
-			`By the time you arrive, Alondo and Freya have joined JJ and Katya on New Tibet; the entire Council is present. "Here's the story," says JJ. "A few weeks ago, hyperspace links on the edge of Syndicate space began collapsing. We weren't sure why. Then, more recently, the Syndicate fleet that had been occupying the Sol system retreated to Syndicate space - and the moment the last of their ships left, the hyperspace link disappeared behind them. We think the Syndicate has found a way to alter hyperspace links and is using it to wall themselves in, to escape retribution from the rest of humanity now that their guilt is so conclusively proven."`
+			`By the time you arrive, Alondo and Freya have joined JJ and Katya on Bushfield; the entire Council is present. "Here's the story," says JJ. "A few weeks ago, hyperspace links on the edge of Syndicate space began collapsing. We weren't sure why. Then, more recently, the Syndicate fleet that had been occupying the Bass Coast Shire Council system retreated to Syndicate space - and the moment the last of their ships left, the hyperspace link disappeared behind them. We think the Syndicate has found a way to alter hyperspace links and is using it to wall themselves in, to escape retribution from the rest of humanity now that their guilt is so conclusively proven."`
 			choice
 				`	"Why don't we just let them go, then?"`
 					goto go
@@ -966,22 +966,22 @@ mission "FW Pug 2"
 				goto communications
 			
 			label republic
-			`	"They're in a panic," says Katya. "Earth is on the very boundary of the area that was cut off, and that means at any moment, they could choose to cut off humanity's homeworld from the rest of human space. And we don't even know if it is possible to restore the links once they have been cut."`
+			`	"They're in a panic," says Katya. "Fitzroy is on the very boundary of the area that was cut off, and that means at any moment, they could choose to cut off humanity's homeworld from the rest of human space. And we don't even know if it is possible to restore the links once they have been cut."`
 				goto communications
 			
 			label communications
 			`	"According to our embassy," says Alondo, "all communications links with Syndicate space have been cut. The Net relies on hyperspace links to transmit messages, and there are no transmitter relays in the uninhabited systems that now form the only remaining link to Syndicate space."`
-			`	JJ says, "The Senate has agreed that we must put our differences with the Republic aside, and meet with Parliament immediately to deal with this crisis. <first>, we're asking you and Alondo to go to Earth, and lend your assistance as you see fit. Any questions?"`
+			`	JJ says, "The Senate has agreed that we must put our differences with the Republic aside, and meet with Parliament immediately to deal with this crisis. <first>, we're asking you and Alondo to go to Fitzroy, and lend your assistance as you see fit. Any questions?"`
 			choice
 				`	"No, I'm ready to go."`
 					accept
 				`	"How do we know the Syndicate is really behind this?"`
 			
-			`	"We don't," says JJ, "but this all certainly plays out very well for them; their section of the galaxy has suddenly become a very defensible enclave. And the timing of that fleet leaving, and then the link closing - it's too much to be a coincidence. But we can't learn anything for sure by staying here talking; you must go to Earth."`
+			`	"We don't," says JJ, "but this all certainly plays out very well for them; their section of the galaxy has suddenly become a very defensible enclave. And the timing of that fleet leaving, and then the link closing - it's too much to be a coincidence. But we can't learn anything for sure by staying here talking; you must go to Fitzroy."`
 				accept
 	
 	npc
-		system "Sol"
+		system "Bass Coast Shire Council"
 		personality heroic uninterested staying
 		government "Republic"
 		fleet "Large Republic"
@@ -1000,10 +1000,10 @@ mission "FW Pug 2"
 mission "FW Pug 2A"
 	landing
 	name "Reason with the Syndicate"
-	description "Travel with Alondo to meet with the Syndicate leaders on Foundry, determine their intentions, and convince them not to completely seal themselves off from human space. Hurry, before they cut the last link."
+	description "Travel with Alondo to meet with the Syndicate leaders on Annuello, determine their intentions, and convince them not to completely seal themselves off from human space. Hurry, before they cut the last link."
 	autosave
-	source Earth
-	destination Foundry
+	source Fitzroy
+	destination Annuello
 	clearance
 	passengers 1
 	to offer
@@ -1014,7 +1014,7 @@ mission "FW Pug 2A"
 	on offer
 		event "fw syndicate welcoming" 11
 		conversation
-			`A palpable sense of fear and near-panic hangs over the spaceport on Earth. At any minute, this system that serves as the very hub of human government could disappear into the same unknown abyss that has swallowed up its neighbors.`
+			`A palpable sense of fear and near-panic hangs over the spaceport on Fitzroy. At any minute, this system that serves as the very hub of human government could disappear into the same unknown abyss that has swallowed up its neighbors.`
 			`	Parliament is eager now to meet with you and to receive whatever assistance you may be able to offer. As Alondo stands in front of the chamber asking the members of Parliament for more information, they answer him with respect and deference, far different from how you have been treated here in the past. You learn that although one link remains open to Syndicate space, no one has dared to travel through it. Given the pace at which the other links were cut, they fear that the one remaining link will disappear any day now.`
 			`	As the conversation continues, it eventually becomes clear why you have been called here: the Republic wants you to take on the risk none of them is willing to face, and travel through to Syndicate space to reason with their leaders.`
 			choice
@@ -1043,7 +1043,7 @@ mission "FW Pug 2A"
 		"reputation: Syndicate" >?= 1
 	
 	npc
-		system "Sol"
+		system "Bass Coast Shire Council"
 		personality heroic uninterested staying
 		government "Republic"
 		fleet "Large Republic"
@@ -1062,7 +1062,7 @@ mission "FW Pug 2A"
 mission "FW Pug 2A Visit"
 	landing
 	source
-		near Achernar 1 100
+		near Ararat Rural City Council 1 100
 		government Syndicate
 	to offer
 		has "FW Pug 2A: active"
@@ -1070,7 +1070,7 @@ mission "FW Pug 2A Visit"
 	on offer
 		"reputation: Syndicate" >?= 1
 		conversation
-			`Oddly, when you land on <origin> you find that the people here are in as much of a state of confusion and fear as back on Earth. Either no one knows what is going on and why they have been nearly cut off from the rest of human space, or every single person you talk to is united in a conspiracy to feign ignorance. They urge you to continue your journey to meet with the Syndicate executives on Foundry. "Maybe you can talk some sense into them," says one merchant captain. "First the nukes, and now this. The extremist faction within the Syndicate is getting out of hand."`
+			`Oddly, when you land on <origin> you find that the people here are in as much of a state of confusion and fear as back on Fitzroy. Either no one knows what is going on and why they have been nearly cut off from the rest of human space, or every single person you talk to is united in a conspiracy to feign ignorance. They urge you to continue your journey to meet with the Syndicate executives on Annuello. "Maybe you can talk some sense into them," says one merchant captain. "First the nukes, and now this. The extremist faction within the Syndicate is getting out of hand."`
 				decline
 
 
@@ -1078,10 +1078,10 @@ mission "FW Pug 2A Visit"
 mission "FW Pug 2B"
 	landing
 	name "Install a Jump Drive"
-	description "Travel to the Syndicate world of Hephaestus, where the Syndicate Systems personnel have been instructed to install a jump drive on your ship, so that you can investigate the systems that the Pug has cut off."
+	description "Travel to the Syndicate world of Sunshine, where the Syndicate Systems personnel have been instructed to install a jump drive on your ship, so that you can investigate the systems that the Pug has cut off."
 	autosave
-	source Foundry
-	destination Hephaestus
+	source Annuello
+	destination Sunshine
 	to offer
 		has "FW Pug 2A: done"
 	passengers 1
@@ -1098,7 +1098,7 @@ mission "FW Pug 2B"
 				`	"If it isn't you, then who is it?"`
 					goto who
 			
-			`	Alastair says, "That terrorism was the action of a certain extremist faction that we have since purged from our ranks, and we were in the process of hunting down the perpetrators. Your raid on Nimbus interrupted those plans and gave the others a chance to go into hiding, but we will see to it that they, too, are brought to justice. But now, we need to put the past behind us and figure out how to work together against our common foe."`
+			`	Alastair says, "That terrorism was the action of a certain extremist faction that we have since purged from our ranks, and we were in the process of hunting down the perpetrators. Your raid on Bonegilla interrupted those plans and gave the others a chance to go into hiding, but we will see to it that they, too, are brought to justice. But now, we need to put the past behind us and figure out how to work together against our common foe."`
 			choice
 				`	"I think you're lying. You had years to turn over those extremists, and you did not."`
 				`	"Very well. Who is this common foe? You seem to know more than we do."`
@@ -1132,17 +1132,17 @@ mission "FW Pug 2B"
 			
 			label help
 			`	"Assuming you're telling the truth," says Alondo, "what sort of help do you need from us?"`
-			`	Alastair says, "We have only seven jump drives, so whatever fleet attacks the Pug can only contain seven ships. Unless the Quarg or someone else will give you more drives, I suppose. So those ships must be stronger than any ship we have here in Syndicate space, because the Pug are very strong. They obliterated our fleet that had been occupying the Sol system, even though that fleet was armed with the majority of our nuclear arsenal."`
+			`	Alastair says, "We have only seven jump drives, so whatever fleet attacks the Pug can only contain seven ships. Unless the Quarg or someone else will give you more drives, I suppose. So those ships must be stronger than any ship we have here in Syndicate space, because the Pug are very strong. They obliterated our fleet that had been occupying the Bass Coast Shire Council system, even though that fleet was armed with the majority of our nuclear arsenal."`
 			choice
 				`	"You're saying you'll provide the jump drives, and we'll provide the ships? Sounds fair enough."`
 					goto deal
-				`	"Wait, you're saying that your fleet that was in orbit around Earth... was armed with nuclear weapons? Are you genocidal?"`
+				`	"Wait, you're saying that your fleet that was in orbit around Fitzroy... was armed with nuclear weapons? Are you genocidal?"`
 			
 			`	Alastair seems like the kind of person who seldom admits he is wrong, but your question definitely flusters him. "Okay, okay, I admit, we've been making one bad decision after another ever since... well, since that first bad decision. It just got out of control. We thought the Navy was going to raid us and put us all behind bars. We thought we needed a deterrent. It was stupid. I admit it, okay? Now please, let's just move on. We need your capital ships, and you need our jump drives."`
 			
 			label deal
 			`	"Hold on," says Alondo, "I have one condition to add. You will give us one of your jump drives immediately. We will install it in our ship and verify that you are telling the truth about the Pug. If you are, we will work together until this threat is dealt with... and once it is dealt with, we will return our attention to bringing every member of the Syndicate who had a hand in those terrorist attacks to justice. That is our best and final offer." You nod in agreement.`
-			`	It's clear that Alastair is none too happy about that deal, but he accepts it. "The jump drives are all being kept on Hephaestus," he says. "Our Systems division was trying to discover the secret behind them, with little success. If you travel there, I'll tell them to install one of the drives in your ship."`
+			`	It's clear that Alastair is none too happy about that deal, but he accepts it. "The jump drives are all being kept on Sunshine," he says. "Our Systems division was trying to discover the secret behind them, with little success. If you travel there, I'll tell them to install one of the drives in your ship."`
 				accept
 
 
@@ -1150,9 +1150,9 @@ mission "FW Pug 2B"
 mission "FW Pug 2C: Hyperdrive"
 	landing
 	name "Investigate the Pug"
-	description "Travel to the Deneb system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
-	source Hephaestus
-	destination Pugglemug
+	description "Travel to the West Wimmera Shire Council system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
+	source Sunshine
+	destination Devenish
 	to offer
 		has "FW Pug 2B: done"
 		not "fw given jump drive"
@@ -1175,9 +1175,9 @@ mission "FW Pug 2C: Hyperdrive"
 mission "FW Pug 2C: Scram Drive"
 	landing
 	name "Investigate the Pug"
-	description "Travel to the Deneb system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
-	source Hephaestus
-	destination Pugglemug
+	description "Travel to the West Wimmera Shire Council system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
+	source Sunshine
+	destination Devenish
 	to offer
 		has "FW Pug 2B: done"
 		not "fw given jump drive"
@@ -1200,9 +1200,9 @@ mission "FW Pug 2C: Scram Drive"
 mission "FW Pug 2C:  Jump Drive"
 	landing
 	name "Investigate the Pug"
-	description "Travel to the Deneb system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
-	source Hephaestus
-	destination Pugglemug
+	description "Travel to the West Wimmera Shire Council system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
+	source Sunshine
+	destination Devenish
 	clearance
 	to offer
 		has "FW Pug 2B: done"
@@ -1227,7 +1227,7 @@ mission "FW Pug 2C: Side"
 	landing
 	source
 		government Pug
-		near Deneb 1 100
+		near West Wimmera Shire Council 1 100
 	to offer
 		has "fw given jump drive"
 		not "FW Pug 3: offered"
@@ -1296,9 +1296,9 @@ mission "FW Pug 2C: Side"
 
 
 
-mission "FW Pug 2C: Pugglequat"
+mission "FW Pug 2C: Hawthorn"
 	landing
-	source Pugglequat
+	source Hawthorn
 	to offer
 		has "fw given jump drive"
 		not "FW Pug 3: offered"
@@ -1311,12 +1311,12 @@ mission "FW Pug 2C: Pugglequat"
 
 
 mission "FW Pug 3"
-	name "Bring news to Earth"
-	description "Now that you have met with the Pug, travel to Earth and explain the situation to Parliament, and send word to the Free Worlds as well, so you can decide how to respond."
+	name "Bring news to Fitzroy"
+	description "Now that you have met with the Pug, travel to Fitzroy and explain the situation to Parliament, and send word to the Free Worlds as well, so you can decide how to respond."
 	autosave
 	landing
-	source Pugglemug
-	destination Earth
+	source Devenish
+	destination Fitzroy
 	to offer
 		has "fw given jump drive"
 	passengers 1
@@ -1340,24 +1340,24 @@ mission "FW Pug 3"
 			`	Alondo says, "I still don't understand what makes you think you have the right to interfere in human affairs."`
 		
 			label interfere
-			`	"'Interfere'?" says the alien. "We have 'interfered' many times before, and always you have benefited. If you do not believe us, ask those who live in the place you call the Deep. We helped them defeat the twisted half-human beings that you created in your foolish attempts to improve your race's genetic code. We have helped keep those creatures in check in the centuries since then. And we have helped in many other ways."`
+			`	"'Interfere'?" says the alien. "We have 'interfered' many times before, and always you have benefited. If you do not believe us, ask those who live in the place you call the Ringwood North. We helped them defeat the twisted half-human beings that you created in your foolish attempts to improve your race's genetic code. We have helped keep those creatures in check in the centuries since then. And we have helped in many other ways."`
 			choice
 				`	"What do you want from us in return?"`
 				`	"What are you planning to do with these systems you have occupied?"`
 			`	"We have brought peace to this region," says the alien, "and we will continue to spread peace until violence has come to an end throughout human space. That is our only desire. All that we ask in return is a portion of the goods your worlds produce, to help offset the cost of watching over and protecting so many human worlds. And after some time, we will again allow human beings autonomous control of certain parts of your territory, when you show yourselves capable of living peacefully."`
 			`	"By 'spreading peace,' do you mean occupying more systems?" asks Alondo.`
 			`	"We mean bringing an end to your war and your divisions," the alien says. "Those of your worlds and your people who have shown themselves unable to live peacefully, we must govern, to teach them peace. Any who attack us, we must destroy, because we are the bringers of peace, and whoever attacks us is not on the side of peace. And so we will send you back to your people now, to tell them that they have nothing to fear, and that they should await our peace and our protection."`
-			`	The aliens appear to think the conversation is over; they walk away and leave you puzzling over what they said. "We should report back to Earth," says Alondo. "This situation is far beyond what we can handle alone."`
+			`	The aliens appear to think the conversation is over; they walk away and leave you puzzling over what they said. "We should report back to Fitzroy," says Alondo. "This situation is far beyond what we can handle alone."`
 				accept
 
 
 
-mission "FW Pug 3: Deep"
+mission "FW Pug 3: Ringwood North"
 	landing
-	name "Visit the Deep (optional)"
-	description "The Pug hinted that they have helped the people of the Deep in the past. Talk to Edrick, the governor of Valhalla, to see what he knows about the Pug. (This mission is optional.)"
-	source Earth
-	destination Valhalla
+	name "Visit the Ringwood North (optional)"
+	description "The Pug hinted that they have helped the people of the Ringwood North in the past. Talk to Edrick, the governor of Bellbrae, to see what he knows about the Pug. (This mission is optional.)"
+	source Fitzroy
+	destination Bellbrae
 	to offer
 		has "FW Pug 3: done"
 	to fail
@@ -1365,10 +1365,10 @@ mission "FW Pug 3: Deep"
 	
 	on complete
 		conversation
-			`As you are coming in for a landing, you contact Edrick Flint and see if he's available to talk. A few minutes later, you and Alondo are sitting with him in his office in the government center. "I assume you've heard about the alien invasion?" says Alondo. Edrick nods. "The aliens claimed that they had had dealings with the Deep in the past. Do you know anything about that?"`
+			`As you are coming in for a landing, you contact Edrick Flint and see if he's available to talk. A few minutes later, you and Alondo are sitting with him in his office in the government center. "I assume you've heard about the alien invasion?" says Alondo. Edrick nods. "The aliens claimed that they had had dealings with the Ringwood North in the past. Do you know anything about that?"`
 			`	Edrick says, "Can you describe what these aliens look like?"`
 			`	"Pale skin, delicate physique, most of them a little under two meters tall," says Alondo. "Long legs, short torsos. And they probably have blue blood."`
-			`	Edrick pauses for several seconds, then says, "Yes, we had contact with a species that matches that description, back during the Alpha War. Some of the folk traditions about 'elves' that still persist here in the Deep are a result of those encounters."`
+			`	Edrick pauses for several seconds, then says, "Yes, we had contact with a species that matches that description, back during the Alpha War. Some of the folk traditions about 'elves' that still persist here in the Ringwood North are a result of those encounters."`
 			choice
 				`	"Do you know what they wanted from humanity, back then?"`
 				`	"What strengths and weaknesses do their ships have?"`
@@ -1390,8 +1390,8 @@ mission "FW Pug 3: Quarg"
 	landing
 	name "Visit the Quarg (optional)"
 	description "Visit the Quarg on <planet> to see if they know anything about the Pug or are willing to help you fight them. (This mission is optional.)"
-	source Earth
-	destination Lagrange
+	source Fitzroy
+	destination Dadswells Bridge
 	to offer
 		has "FW Pug 3: done"
 	to fail
@@ -1446,10 +1446,10 @@ mission "FW Pug 3: Quarg"
 mission "FW Pug 3A"
 	landing
 	name "Gather the fleet"
-	description "Travel to <destination>, and requisition two Free Worlds Dreadnoughts to join in the battle against the Pug. (But if you want to visit the Quarg or the Deep, do that first.)"
+	description "Travel to <destination>, and requisition two Free Worlds Dreadnoughts to join in the battle against the Pug. (But if you want to visit the Quarg or the Ringwood North, do that first.)"
 	autosave
-	source Earth
-	destination Zug
+	source Fitzroy
+	destination Garfield
 	to offer
 		has "FW Pug 3: done"
 	passengers 1
@@ -1458,7 +1458,7 @@ mission "FW Pug 3A"
 	
 	on offer
 		conversation
-			`Your ship caused quite a stir when it entered the Sol system via jump drive. Fortunately Parliament allowed you to land in one of their private hangars, but even so a few press drones managed to follow your ship into the hangar and have cameras pointed at you from the moment you and Alondo disembark.`
+			`Your ship caused quite a stir when it entered the Bass Coast Shire Council system via jump drive. Fortunately Parliament allowed you to land in one of their private hangars, but even so a few press drones managed to follow your ship into the hangar and have cameras pointed at you from the moment you and Alondo disembark.`
 			`	You report to Parliament that the hyperspace links are being cut not by the Syndicate, but by an alien species, and that the Syndicate has offered to supply jump drives for an attack fleet if the Republic and the Free Worlds will supply the ships. You also report that the aliens' intention is to spread out to occupy more of human space and to demand a fraction of the resource production of all human planets, supposedly in the name of bringing "peace."`
 			`	One of the Senators asks, "Do you think we have any chance of defeating the aliens?"`
 			choice
@@ -1468,7 +1468,7 @@ mission "FW Pug 3A"
 			`	"I think we have no choice," says one of the older members. "Even if it is a losing battle, we can't let the human race be enslaved without a fight."`
 			label questions
 			`	They have many other questions after that; you answer them as best you can, and leave them with full copies of your sensor logs of the alien ships and planets. Parliament agrees that the next step is for you to convince the Free Worlds to contribute two Dreadnoughts to the attack fleet. "Also," one of the members of Parliament says, "maybe you could talk to those aliens who live down in your part of space, see if they can help us out in any way. It sure would be handy if the Pug turn out to be an enemy of theirs."`
-			`	During the hearing, you refrained from mentioning that the Pug claimed to have assisted the Deep in the past, but once you are back in your ship Alondo says, "Maybe we should also visit Valhalla and see if Governor Flint has any information for us."`
+			`	During the hearing, you refrained from mentioning that the Pug claimed to have assisted the Ringwood North in the past, but once you are back in your ship Alondo says, "Maybe we should also visit Bellbrae and see if Governor Flint has any information for us."`
 				accept
 
 
@@ -1478,8 +1478,8 @@ mission "FW Pug 3B"
 	name "Escort to <planet>"
 	description "Travel to <planet> with two Free Worlds Dreadnoughts that will be joining the fight against the Pug."
 	autosave
-	source Zug
-	destination Geminus
+	source Garfield
+	destination Alberton
 	clearance
 	to offer
 		has "FW Pug 3A: done"
@@ -1493,13 +1493,13 @@ mission "FW Pug 3B"
 			`Freya meets you soon after you land. "I've heard the news," she says. "I talked to the Senate, and they think that I should travel with you during your assault on the Pug, in case I can help figure out their technology, maybe even how to restore the hyperspace links. And they say they need Alondo back here to do diplomatic visits and help keep people from panicking."`
 			`	"I guess that makes sense," says Alondo.`
 			`	"Also," says Freya, "the Senate approved a raise for you, <first>. Your new salary will be six thousand credits a day. I hope that means you'll be able to go into battle against the Pug with the strongest ship possible, because I suspect we'll need all the firepower we can get."`
-			`	Alondo wishes you the best of luck and leaves to catch a transport to Bourne, while Freya takes you to the spaceport and introduces you to the captains of the two Dreadnoughts that have volunteered to fight the Pug. She also asks you all sorts of technical questions: what sort of propulsion and energy sources the Pug seem to use, what their weapon capabilities are, and whether you saw any sign of the technology that was used to destroy the hyperspace links. You have a hard time answering her, but are glad that she will be with you this time to see the aliens firsthand.`
+			`	Alondo wishes you the best of luck and leaves to catch a transport to Anglers Rest, while Freya takes you to the spaceport and introduces you to the captains of the two Dreadnoughts that have volunteered to fight the Pug. She also asks you all sorts of technical questions: what sort of propulsion and energy sources the Pug seem to use, what their weapon capabilities are, and whether you saw any sign of the technology that was used to destroy the hyperspace links. You have a hard time answering her, but are glad that she will be with you this time to see the aliens firsthand.`
 				accept
 	
 	npc accompany save
 		personality escort disables
 		ship "Dreadnought" "F.S. Independence"
-		ship "Dreadnought" "F.S. Freedom"
+		ship "Dreadnought" "F.S. Bellbridge"
 	
 	on visit
 		dialog "You have reached <planet>, but the dreadnoughts are lagging behind you because they are using ordinary hyperdrives. Better depart and wait for them to arrive in this star system."
@@ -1508,11 +1508,11 @@ mission "FW Pug 3B"
 
 mission "FW Pug 3C"
 	landing
-	name "Escort to Hephaestus"
+	name "Escort to Sunshine"
 	description "Escort the combined Free Worlds and Navy fleet to <destination>, where the Syndicate will fit all the ships with jump drives."
 	autosave
-	source Geminus
-	destination Hephaestus
+	source Alberton
+	destination Sunshine
 	to offer
 		has "FW Pug 3B: done"
 	passengers 1
@@ -1521,7 +1521,7 @@ mission "FW Pug 3C"
 	
 	on offer
 		conversation
-			`You land at the Republic Navy Yard on Geminus escorting the two Dreadnoughts that are the Free Worlds contribution to the war against the Pug. You are met by the shipyard supervisor and a team of engineers who are preparing the Navy ships to join you. "So, these are your Dreadnoughts," one of them says. "I'm glad to finally have the chance to see one up close. I don't suppose one of the captains would be willing to give me a tour."`
+			`You land at the Republic Navy Yard on Alberton escorting the two Dreadnoughts that are the Free Worlds contribution to the war against the Pug. You are met by the shipyard supervisor and a team of engineers who are preparing the Navy ships to join you. "So, these are your Dreadnoughts," one of them says. "I'm glad to finally have the chance to see one up close. I don't suppose one of the captains would be willing to give me a tour."`
 			choice
 				`	"Um, we're right in the middle of resisting an alien invasion, here."`
 				`	"Sorry, we aren't authorized to share military secrets with you."`
@@ -1540,7 +1540,7 @@ mission "FW Pug 3C"
 	npc accompany save
 		personality escort
 		ship "Dreadnought" "F.S. Independence"
-		ship "Dreadnought" "F.S. Freedom"
+		ship "Dreadnought" "F.S. Bellbridge"
 	npc accompany save
 		personality escort
 		government "Republic"
@@ -1557,7 +1557,7 @@ mission "FW Pug 3C"
 mission "FW Pug 4: Escorts"
 	landing
 	invisible
-	source Hephaestus
+	source Sunshine
 	to offer
 		has "FW Pug 3C: done"
 	
@@ -1567,7 +1567,7 @@ mission "FW Pug 4: Escorts"
 	npc kill
 		personality escort heroic disables
 		ship "Dreadnought (Jump)" "F.S. Independence"
-		ship "Dreadnought (Jump)" "F.S. Freedom"
+		ship "Dreadnought (Jump)" "F.S. Bellbridge"
 	npc kill
 		personality escort heroic disables
 		government "Republic"
@@ -1611,8 +1611,8 @@ mission "FW Pug 4"
 	name "Liberate <system>"
 	description "Attempt to drive the Pug out of the <system> system, then land on <planet>."
 	autosave
-	source Hephaestus
-	destination Maker
+	source Sunshine
+	destination Bonnie Doon
 	clearance
 	to offer
 		has "FW Pug 3C: done"
@@ -1625,14 +1625,14 @@ mission "FW Pug 4"
 		conversation
 			`The Syndicate directs you to land your ships in the private hangars for Syndicated Systems. Once you have landed, they quickly work to install jump drives in the Navy and Free Worlds ships. As they work, you hear one of the workers saying to another, "Golly, I'd forgotten how big those Navy ships are. Makes a Protector look puny by comparison, doesn't it?"`
 			`	Once the work is done, you meet with a senior Syndicate executive named Marco Bugati. "I really hope this works," he says, "because these are the only jump drives we've been able to acquire. If your fleet is destroyed, we will have lost access to the occupied territory entirely."`
-			`	You gather your fleet and prepare for an assault on Delta Capricorni, which is the occupied star system closest to Syndicate space.`
+			`	You gather your fleet and prepare for an assault on Wangaratta Rural City Council, which is the occupied star system closest to Syndicate space.`
 			``
 			`[Take good care of this fleet: if ships are disabled, board them to "repair" them once the battle is over. And, when jumping into battle, remember that you can hold down the jump key to get all your ships ready to jump simultaneously, so no single ship enters the system first and bears the brunt of the enemy fire.]`
 				accept
 	
 	npc evade
 		personality disables staying
-		system "Delta Capricorni"
+		system "Wangaratta Rural City Council"
 		government Pug
 		fleet
 			names "pug"
@@ -1674,9 +1674,9 @@ mission "FW Pug 4"
 
 mission "FW Pug 4A"
 	landing
-	name "Defend Maker"
-	description "Keep the Pug from regaining control of Maker for long enough for Freya to figure out whether it is possible to restore the hyperspace link back to the Markab system."
-	source Maker
+	name "Defend Bonnie Doon"
+	description "Keep the Pug from regaining control of Bonnie Doon for long enough for Freya to figure out whether it is possible to restore the hyperspace link back to the Alpine Shire Council system."
+	source Bonnie Doon
 	to offer
 		has "FW Pug 4: done"
 	on fail
@@ -1690,17 +1690,17 @@ mission "FW Pug 4A"
 				goto generator
 			
 			label lost
-			`You have liberated this planet, but with your entire fleet destroyed your victory may be short-lived. Still, you have no option but to continue on and try your best. Fortunately, it turns out that none of the Pug are left on the ground here on Maker; they all left the planet to join in the fleet that you just destroyed. So at least you don't have a land war to worry about.`
+			`You have liberated this planet, but with your entire fleet destroyed your victory may be short-lived. Still, you have no option but to continue on and try your best. Fortunately, it turns out that none of the Pug are left on the ground here on Bonnie Doon; they all left the planet to join in the fleet that you just destroyed. So at least you don't have a land war to worry about.`
 				goto generator
 			
 			label generator
-			`	Freya has some good news: she is picking up very faint, intermittent signals from the hyperspace communications relay back in the Markab system. "That means the link may not be closed completely," she says, "or at least, there's some residue remaining."`
+			`	Freya has some good news: she is picking up very faint, intermittent signals from the hyperspace communications relay back in the Alpine Shire Council system. "That means the link may not be closed completely," she says, "or at least, there's some residue remaining."`
 			`	Freya directs you to fly over the planet and survey the buildings and equipment that the Pug left behind, and after searching for a while you discover an alien building that vaguely resembles a radio transmitter. You land nearby, and as you approach the building on foot, you feel as if the ground beneath you is heaving and rolling like the deck of a ship on choppy seas. "Graviton distortions," she says. "This may be it, the equipment they used to disrupt the hyperspace links. It will take me a while to figure out how it works, though."`
 			`	You agree that she will stay here to try to figure out the alien technology, while you do your best to defend the planet and to keep the Pug from retaking it.`
 				accept
 	
 	npc
-		system Deneb
+		system West Wimmera Shire Council
 		government Pug
 		personality disables
 		fleet
@@ -1716,10 +1716,10 @@ mission "FW Pug 4A"
 				"Pug Zibruka" 2	
 	
 	npc disable
-		system Rasalhague
+		system Monash City Council
 		government Pug
 		personality disables
-		dialog `You receive a message from Freya: "Captain, I think I've figured out the transmitter, and there is indeed a chance that we can reopen the hyperspace links. Meet me back down on the planet as soon as possible - I'll need you to take some equipment back to Hephaestus and set it up there."`
+		dialog `You receive a message from Freya: "Captain, I think I've figured out the transmitter, and there is indeed a chance that we can reopen the hyperspace links. Meet me back down on the planet as soon as possible - I'll need you to take some equipment back to Sunshine and set it up there."`
 		fleet
 			names "pug"
 			variant
@@ -1746,10 +1746,10 @@ mission "FW Pug 4A"
 
 mission "FW Pug 4B"
 	landing
-	name "Reflector to Hephaestus"
-	description `Freya found a device that she believes is a "graviton reflector," which can somehow be set up in the <system> system to re-establish the hyperspace link between there and Delta Capricorni. Bring the transmitter to the Syndicate officials on <planet>.`
-	source Maker
-	destination Hephaestus
+	name "Reflector to Sunshine"
+	description `Freya found a device that she believes is a "graviton reflector," which can somehow be set up in the <system> system to re-establish the hyperspace link between there and Wangaratta Rural City Council. Bring the transmitter to the Syndicate officials on <planet>.`
+	source Bonnie Doon
+	destination Sunshine
 	to offer
 		has "FW Pug 4A: done"
 	cargo "graviton reflector" 10
@@ -1759,7 +1759,7 @@ mission "FW Pug 4B"
 	
 	on offer
 		conversation
-			`Freya meets you soon after you land. She has brought with her a large piece of alien machinery, mounted on a flat-bed truck for easy transportation. "I shut down the transmitter," she says, "and sure enough, the signal from Markab started to gradually become stronger. I think it was somehow jamming or suppressing the hyperspace link, rather than completely severing it. So then I found that the transmitter has a different setting, where instead of sending random graviton noise, it sends a steady, harmonic pulse. And that accelerated the process of reopening the link."`
+			`Freya meets you soon after you land. She has brought with her a large piece of alien machinery, mounted on a flat-bed truck for easy transportation. "I shut down the transmitter," she says, "and sure enough, the signal from Alpine Shire Council started to gradually become stronger. I think it was somehow jamming or suppressing the hyperspace link, rather than completely severing it. So then I found that the transmitter has a different setting, where instead of sending random graviton noise, it sends a steady, harmonic pulse. And that accelerated the process of reopening the link."`
 			choice
 				`	"Great! How soon until the link is open again?"`
 					goto time
@@ -1769,7 +1769,7 @@ mission "FW Pug 4B"
 			`	"So, you succeeded in opening the link?" you say.`
 			label time
 			`	"Well, that's the bad news," she says. "At this rate, it will take several years to reopen the connection. And I doubt this method would work at all if there weren't still the residual link in place. But that's where this equipment comes in."`
-			`	She points to the alien machine. "This machine is like the transmitter, but much simpler. The transmitter somehow redirects a planet's gravity spaceward; what this machine does is reflect a graviton beam back where it comes from. If we can mount the reflector on Hephaestus, and align them both very precisely, we can set up a standing wave between the two that will regenerate the hyperspace link much more quickly. Or for all I know it might create an artificial singularity that destroys us all. I'm mostly flying blind here."`
+			`	She points to the alien machine. "This machine is like the transmitter, but much simpler. The transmitter somehow redirects a planet's gravity spaceward; what this machine does is reflect a graviton beam back where it comes from. If we can mount the reflector on Sunshine, and align them both very precisely, we can set up a standing wave between the two that will regenerate the hyperspace link much more quickly. Or for all I know it might create an artificial singularity that destroys us all. I'm mostly flying blind here."`
 			choice
 				`	"Well, I guess we should give it a try."`
 					goto load
@@ -1777,7 +1777,7 @@ mission "FW Pug 4B"
 			
 			`	"No," she says, "no, there are not. Sorry."`
 			label load
-			`	You load the reflector onto your ship, and get ready to travel to Hephaestus. You suspect that the Pug are going to try to stop you, once they realize what is happening...`
+			`	You load the reflector onto your ship, and get ready to travel to Sunshine. You suspect that the Pug are going to try to stop you, once they realize what is happening...`
 				accept
 
 
@@ -1785,7 +1785,7 @@ mission "FW Pug 4B"
 mission "FW Pug 4B: Enemies"
 	landing
 	invisible
-	source Maker
+	source Bonnie Doon
 	to offer
 		has "FW Pug 4A: done"
 	to fail
@@ -1793,7 +1793,7 @@ mission "FW Pug 4B: Enemies"
 	
 	npc kill
 		personality waiting disables
-		system Deneb
+		system West Wimmera Shire Council
 		government Pug
 		fleet
 			names "pug"
@@ -1825,7 +1825,7 @@ mission "FW Pug 4B: Enemies"
 mission "FW Pug 4B: Reinforcements"
 	landing
 	invisible
-	source Maker
+	source Bonnie Doon
 	to offer
 		has "FW Pug 4A: done"
 	to fail
@@ -1833,13 +1833,13 @@ mission "FW Pug 4B: Reinforcements"
 	
 	npc kill
 		personality disables
-		system Markab
+		system Alpine Shire Council
 		fleet
 			names "syndicate capital"
 			variant
 				"Splinter (Mark II)"
 				"Manta (Mark II)" 2
-				"Quicksilver (Mark II)" 4
+				"Kealba (Mark II)" 4
 		fleet
 			names "syndicate capital"
 			variant
@@ -1851,8 +1851,8 @@ mission "FW Pug 4C"
 	landing
 	name "Return to <system>"
 	description "Return to <destination>, accompanied by your new reinforcement fleet supplied by the Syndicate, and talk with Freya to decide on what your next steps should be now that you have the ability to restore the links to human space."
-	source Hephaestus
-	destination Maker
+	source Sunshine
+	destination Bonnie Doon
 	to offer
 		has "FW Pug 4B: done"
 	on fail
@@ -1862,8 +1862,8 @@ mission "FW Pug 4C"
 		event "reconnected delta capricorni"
 		conversation
 			`Freya sent detailed instructions with the reflector for where it should be set up and how it should be adjusted to interface with the transmitter back in Pug space. You hand it over to a team of Syndicate engineers, who seem quite capable and confident that they can make it work; you suspect that these are the same engineers who have been playing with equipment stolen from the Korath, so they are no strangers to alien technology.`
-			`	You also meet with Marco Bugati, the Syndicate executive who oversaw the installation of your jump drives, and tell him that you may soon be able to reopen one of the connections to Republic space, as well. You ask if he can send a courier ship to Earth to inform them of the new situation, to have them begin massing a fleet there. He agrees. He also tells you that a few of the Syndicate ships that met you in orbit have been designated as additions to your attack fleet, so they will be traveling back to Maker with you if the reflector succeeds in reopening the link.`
-			`	A few hours later, the engineers tell you that they think the link is beginning to reopen. Bugati says, "You should take off and return as soon as possible, in case Maker has been attacked in your absence."`
+			`	You also meet with Marco Bugati, the Syndicate executive who oversaw the installation of your jump drives, and tell him that you may soon be able to reopen one of the connections to Republic space, as well. You ask if he can send a courier ship to Fitzroy to inform them of the new situation, to have them begin massing a fleet there. He agrees. He also tells you that a few of the Syndicate ships that met you in orbit have been designated as additions to your attack fleet, so they will be traveling back to Bonnie Doon with you if the reflector succeeds in reopening the link.`
+			`	A few hours later, the engineers tell you that they think the link is beginning to reopen. Bugati says, "You should take off and return as soon as possible, in case Bonnie Doon has been attacked in your absence."`
 				accept
 
 
@@ -1871,9 +1871,9 @@ mission "FW Pug 4C"
 mission "FW Pug 5"
 	landing
 	name "Liberate <planet>"
-	description "If you can drive the Pug away from <destination>, you will be able to re-establish the hyperspace link between Altair and the Sol system, and immediately bring in Navy ships as reinforcements."
-	source Maker
-	destination Shiver
+	description "If you can drive the Pug away from <destination>, you will be able to re-establish the hyperspace link between Hume City Council and the Bass Coast Shire Council system, and immediately bring in Navy ships as reinforcements."
+	source Bonnie Doon
+	destination Dooen
 	clearance
 	to offer
 		has "FW Pug 4C: done"
@@ -1894,12 +1894,12 @@ mission "FW Pug 5"
 			
 			`	"I'm sure of nothing," she says, "but it seemed to work, and without any catastrophic side effects so far, so that's something."`
 			label next
-			`	Freya leads you to a warehouse in the spaceport where another one of the "graviton reflectors" is stored. "This should work the same as the one you brought to Hephaestus," she says. "If there's a transmitter on Shiver, we can bring the reflector to Sol and open a link back to the very heart of human space. And at that point, we may even have the Pug outgunned. But first, we need to drive them away from that star system for long enough for me to work the transmitter."`
+			`	Freya leads you to a warehouse in the spaceport where another one of the "graviton reflectors" is stored. "This should work the same as the one you brought to Sunshine," she says. "If there's a transmitter on Dooen, we can bring the reflector to Bass Coast Shire Council and open a link back to the very heart of human space. And at that point, we may even have the Pug outgunned. But first, we need to drive them away from that star system for long enough for me to work the transmitter."`
 				accept
 	
 	npc evade
 		personality staying disables
-		system Altair
+		system Hume City Council
 		government Pug
 		fleet
 			names "pug"
@@ -1930,7 +1930,7 @@ mission "FW Pug 5"
 mission "FW Pug 5A: Enemies"
 	landing
 	invisible
-	source Shiver
+	source Dooen
 	to offer
 		has "FW Pug 5: done"
 	to fail
@@ -1938,7 +1938,7 @@ mission "FW Pug 5A: Enemies"
 	
 	npc kill
 		personality waiting disables
-		system Deneb
+		system West Wimmera Shire Council
 		government Pug
 		fleet
 			names "pug"
@@ -1970,9 +1970,9 @@ mission "FW Pug 5A: Enemies"
 mission "FW Pug 5A"
 	landing
 	name "Reflector to <planet>"
-	description `Bring this "graviton reflector" to <planet> and set it up there, in order to restore the hyperspace link between the Sol and Altair systems.`
-	source Shiver
-	destination Earth
+	description `Bring this "graviton reflector" to <planet> and set it up there, in order to restore the hyperspace link between the Bass Coast Shire Council and Hume City Council systems.`
+	source Dooen
+	destination Fitzroy
 	to offer
 		has "FW Pug 5: done"
 	cargo "graviton reflector" 10
@@ -1981,7 +1981,7 @@ mission "FW Pug 5A"
 	
 	on offer
 		conversation
-			`Sure enough, Freya finds a graviton wave transmitter on <origin>, set up to broadcast incoherent graviton noise in the direction of the Sol system. "This is it," she says. "If you can reach <planet> with the reflector before we are overrun by the Pug here, we can reopen the hyperspace link and the entire Navy will be at our backs. Hopefully the Syndicate got a message through and they'll have a fleet waiting for you when you arrive."`
+			`Sure enough, Freya finds a graviton wave transmitter on <origin>, set up to broadcast incoherent graviton noise in the direction of the Bass Coast Shire Council system. "This is it," she says. "If you can reach <planet> with the reflector before we are overrun by the Pug here, we can reopen the hyperspace link and the entire Navy will be at our backs. Hallamfully the Syndicate got a message through and they'll have a fleet waiting for you when you arrive."`
 			choice
 				`	"You really think you can hold off the Pug if I make a run for <planet>?"`
 				`	"I'm worried that you won't survive if I leave this system undefended."`
@@ -1991,7 +1991,7 @@ mission "FW Pug 5A"
 	npc
 		government Republic
 		personality staying
-		system Sol
+		system Bass Coast Shire Council
 		fleet
 			names "republic capital"
 			fighters "republic fighter"
@@ -2012,10 +2012,10 @@ mission "FW Pug 5A"
 
 mission "FW Pug 5B"
 	landing
-	name "Defend Altair"
+	name "Defend Hume City Council"
 	description "Freya sent you a message that the <system> system is under attack. Return there, accompanied by your new Navy reinforcements, and drive off the Pug."
-	source Earth
-	destination Shiver
+	source Fitzroy
+	destination Dooen
 	clearance
 	to offer
 		has "FW Pug 5A: done"
@@ -2025,7 +2025,7 @@ mission "FW Pug 5B"
 	on offer
 		event "reconnected altair"
 		conversation
-			`You help some Navy engineers on Earth to set up the graviton reflector according to Freya's instructions. As before, soon after the reflector is operational the ground seems to tilt and roll as Freya's beam hones in on the reflector and sets up a harmonic oscillation between the two. "The link is reopening!" says one of the engineers. "We're beginning to receive hyperspace communications from Altair again, and from the Syndicate too."`
+			`You help some Navy engineers on Fitzroy to set up the graviton reflector according to Freya's instructions. As before, soon after the reflector is operational the ground seems to tilt and roll as Freya's beam hones in on the reflector and sets up a harmonic oscillation between the two. "The link is reopening!" says one of the engineers. "We're beginning to receive hyperspace communications from Hume City Council again, and from the Syndicate too."`
 			`	A second later your own communicator beeps. It's Freya. "Get back here quickly," she says. "Bring whatever reinforcements you can. A massive Pug fleet just appeared in orbit."`
 				accept
 	
@@ -2058,7 +2058,7 @@ mission "FW Pug 5B"
 	npc evade
 		government Pug
 		personality staying disables
-		system Altair
+		system Hume City Council
 		fleet
 			names "pug"
 			variant
@@ -2092,23 +2092,23 @@ mission "FW Pug 6"
 	name "Defeat the Pug"
 	description "Now that the Navy has joined you, it is time to take the battle directly to the Pug home system. Once their fleet is eliminated, land on their home world of <planet> to attempt to negotiate for peace."
 	autosave
-	source Shiver
-	destination Pugglemug
+	source Dooen
+	destination Devenish
 	clearance
 	to offer
 		has "FW Pug 5B: done"
 	passengers 1
 	blocked "You need a bunk free for Freya to continue this mission."
-	on enter Deneb
+	on enter West Wimmera Shire Council
 		dialog
-			`You enter the Deneb system expecting a massive Pug battle fleet to be waiting for you. Instead, it is entirely deserted. Also, your sensors are picking up some sort of anomaly outside the orbit of the outermost planet.`
+			`You enter the West Wimmera Shire Council system expecting a massive Pug battle fleet to be waiting for you. Instead, it is entirely deserted. Also, your sensors are picking up some sort of anomaly outside the orbit of the outermost planet.`
 	on fail
 		dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
 	
 	on offer
 		event "pug flee"
 		conversation
-			`The tiny spaceport on Shiver is packed with people as more and more Navy ships come in for a landing. The Navy admirals have decided that there is no sense in delaying: you will be launching an attack on the Pug homeworld in the morning. Despite your success so far in battling the Pug, you know that if their entire fleet opposes you, even the Navy may not be strong enough to defeat them. This may be the last time you see many of these officers and crew members alive.`
+			`The tiny spaceport on Dooen is packed with people as more and more Navy ships come in for a landing. The Navy admirals have decided that there is no sense in delaying: you will be launching an attack on the Pug homeworld in the morning. Despite your success so far in battling the Pug, you know that if their entire fleet opposes you, even the Navy may not be strong enough to defeat them. This may be the last time you see many of these officers and crew members alive.`
 			`	Everyone prepares for death in different ways. The spaceport's pub is packed, with the crowd spilling out into the hallway and loud music blasting. The chapel is equally full, and the sound of whispered prayers and chanting clashes with the dance music from the pub. Through the doorway of the chapel you see some people sitting cross-legged on the floor and others kneeling on prayer rugs, as the various cultures that make up the Republic do their best to share the space.`
 			`	You find Freya sitting in a secluded nook on the upper floor of the spaceport building, watching the drifting snow out the window. "Ready for the last battle, Captain?" she asks.`
 			choice
@@ -2193,7 +2193,7 @@ mission "FW Pug 6"
 			variant
 				"Splinter (Mark II)"
 				"Manta (Mark II)" 2
-				"Quicksilver (Mark II)" 4
+				"Kealba (Mark II)" 4
 		fleet
 			names "syndicate capital"
 			variant
@@ -2203,7 +2203,7 @@ mission "FW Pug 6"
 			variant
 				"Splinter (Mark II)"
 				"Manta (Mark II)" 2
-				"Quicksilver (Mark II)" 4
+				"Kealba (Mark II)" 4
 		fleet
 			names "syndicate capital"
 			variant
@@ -2267,8 +2267,8 @@ mission "FW Syndicate Extremists 1"
 	name "Deal with the Syndicate"
 	description "Now that the Pug appear to have been driven off, it's time to get some answers from the Syndicate. Travel with Admiral Danforth back to <destination>, for another meeting with the CEO of the Syndicate."
 	autosave
-	source Pugglemug
-	destination Foundry
+	source Devenish
+	destination Annuello
 	to offer
 		has "FW Pug 6: done"
 	passengers 1
@@ -2302,10 +2302,10 @@ mission "FW Syndicate Extremists 1"
 mission "FW Syndicate Extremists 1A"
 	landing
 	name "Cloaking Device"
-	description "Alastair Korban has agreed to give you a cloaking device that will allow you to evade missile attacks. Travel to Hephaestus, where they will install the device on your ship."
+	description "Alastair Korban has agreed to give you a cloaking device that will allow you to evade missile attacks. Travel to Sunshine, where they will install the device on your ship."
 	autosave
-	source Foundry
-	destination Hephaestus
+	source Annuello
+	destination Sunshine
 	to offer
 		has "FW Syndicate Extremists 1: done"
 	passengers 1
@@ -2351,7 +2351,7 @@ mission "FW Syndicate Extremists 1A"
 			
 			`	"I don't see why not," says Danforth, fixing Alastair with a piercing gaze. "It's certainly better than leaving it in Syndicate hands."`
 			label end
-			`	Alastair tells you that the device is being kept on Hephaestus, and the engineers there can install it in your ship. Meanwhile, Danforth will call in the rest of his Oathkeeper fleet. "The Alphas are holed up on Buccaneer Bay," says Alastair, "an old pirate world. Good luck in defeating them."`
+			`	Alastair tells you that the device is being kept on Sunshine, and the engineers there can install it in your ship. Meanwhile, Danforth will call in the rest of his Oathkeeper fleet. "The Alphas are holed up on Langwarrin," says Alastair, "an old pirate world. Good luck in defeating them."`
 				accept
 	
 	npc accompany save
@@ -2368,8 +2368,8 @@ mission "FW Syndicate Extremists 1B"
 	landing
 	name "Final Battle"
 	description "A fleet of nuclear-armed Syndicate extremists controlled by the Alphas is occupying the <system> system. Travel there and use the cloaking device to draw their fire; the Oathkeeper fleet will be right behind you."
-	source Hephaestus
-	destination "Buccaneer Bay"
+	source Sunshine
+	destination "Langwarrin"
 	clearance
 	to offer
 		has "FW Syndicate Extremists 1A: done"
@@ -2383,12 +2383,12 @@ mission "FW Syndicate Extremists 1B"
 		outfit "Cloaking Device" 1
 		conversation
 			`You land in the same private hangar that you visited previously to have the jump drive installed, and you think these engineers are the same crew that met you back then. "This thing is almost as bizarre as the jump drive itself," one of them says. "We have no clue how it works, and we weren't done studying it when Korban ordered us to give it to you, so please don't get yourself blown up. Okay?"`
-			`	Meanwhile, Danforth is on his way back to Deneb to rally the Oathkeepers. You should head directly for the <system> system, so that you arrive there far enough in advance of the Oathkeeper fleet.`
+			`	Meanwhile, Danforth is on his way back to West Wimmera Shire Council to rally the Oathkeepers. You should head directly for the <system> system, so that you arrive there far enough in advance of the Oathkeeper fleet.`
 				accept
 	
 	npc evade
 		government "Syndicate (Extremist)"
-		system Algenib
+		system Campaspe Shire Council
 		personality staying heroic
 		fleet
 			names "syndicate capital"
@@ -2396,7 +2396,7 @@ mission "FW Syndicate Extremists 1B"
 				"Manta (Nuclear)" 2
 	npc evade
 		government "Syndicate (Extremist)"
-		system Algenib
+		system Campaspe Shire Council
 		personality staying heroic
 		fleet
 			names "syndicate capital"
@@ -2404,7 +2404,7 @@ mission "FW Syndicate Extremists 1B"
 				"Manta (Nuclear)" 2
 	npc evade
 		government "Syndicate (Extremist)"
-		system Algenib
+		system Campaspe Shire Council
 		personality staying heroic
 		fleet
 			names "syndicate capital"
@@ -2412,7 +2412,7 @@ mission "FW Syndicate Extremists 1B"
 				"Manta (Nuclear)" 2
 	npc evade
 		government "Syndicate (Extremist)"
-		system Algenib
+		system Campaspe Shire Council
 		personality staying heroic
 		fleet
 			names "syndicate capital"
@@ -2420,7 +2420,7 @@ mission "FW Syndicate Extremists 1B"
 				"Manta (Nuclear)" 2
 	npc evade
 		government "Syndicate (Extremist)"
-		system Algenib
+		system Campaspe Shire Council
 		personality staying heroic
 		fleet
 			names "syndicate capital"
@@ -2430,12 +2430,12 @@ mission "FW Syndicate Extremists 1B"
 			names "syndicate capital"
 			variant
 				"Splinter"
-				"Quicksilver" 3
+				"Kealba" 3
 		fleet
 			names "syndicate capital"
 			variant
 				"Splinter"
-				"Quicksilver" 3
+				"Kealba" 3
 		fleet
 			names "syndicate capital"
 			variant
@@ -2447,7 +2447,7 @@ mission "FW Syndicate Extremists 1B"
 	
 	npc
 		government "Navy (Oathkeeper)"
-		system Deneb
+		system West Wimmera Shire Council
 		personality heroic escort
 		fleet
 			names "republic capital"
@@ -2474,10 +2474,10 @@ mission "FW Syndicate Extremists 1B"
 mission "FW Syndicate Extremists 1C"
 	landing
 	name "Report to Parliament"
-	description "Return to Earth to report to Parliament on the resolution of the conflicts with the Pug and with the Syndicate extremists."
+	description "Return to Fitzroy to report to Parliament on the resolution of the conflicts with the Pug and with the Syndicate extremists."
 	autosave
-	source "Buccaneer Bay"
-	destination Earth
+	source "Langwarrin"
+	destination Fitzroy
 	to offer
 		has "FW Syndicate Extremists 1B: done"
 	passengers 1
@@ -2498,7 +2498,7 @@ mission "FW Syndicate Extremists 1C"
 			
 			`	"What, does peace and reconciliation sound boring to you?" he says. "Don't worry about that. With that jump drive installed in your ship, the whole galaxy is open to you. Who knows what you might discover beyond the boundaries of human space?"`
 			label end
-			`	You return to your ship, and prepare for the journey back to Earth, hopeful that at last Parliament will be willing to negotiate a permanent peace with the Free Worlds.`
+			`	You return to your ship, and prepare for the journey back to Fitzroy, hopeful that at last Parliament will be willing to negotiate a permanent peace with the Free Worlds.`
 				accept
 	
 	on complete
@@ -2506,7 +2506,7 @@ mission "FW Syndicate Extremists 1C"
 		set "main plot completed"
 		set "free worlds plot completed"
 		conversation
-			`On Earth, you return to something of a hero's welcome, far different from the first time you were here on a diplomatic mission. A crowd of locals gathers in the spaceport to watch your ship land. With the Free Worlds having been instrumental in defeating the aliens, and absolved of any guilt in the terrorist attacks, it seems that most people here are ready to see you as a hero rather than a criminal.`
+			`On Fitzroy, you return to something of a hero's welcome, far different from the first time you were here on a diplomatic mission. A crowd of locals gathers in the spaceport to watch your ship land. With the Free Worlds having been instrumental in defeating the aliens, and absolved of any guilt in the terrorist attacks, it seems that most people here are ready to see you as a hero rather than a criminal.`
 			`	You discover that Parliament has made a treaty with the Free Worlds, agreeing that the Free Worlds will be allowed autonomy in the region they currently control as long as they do not seek to expand their territory further. As of now, your war against the Republic is officially over.`
 			`	Your meeting with Parliament is long and grueling, as they press you and Freya for every detail you can give them about the enigmatic Pug and their apparent motivation in invading human space. The questions about the Syndicate are equally hard to answer. But at the end of the session, one of the members of Parliament informs you that they have authorized an official commendation for you, along with a reward of five million credits "to cover any of your expenses from fighting the aliens, and to help you integrate back into civilian life."`
 			`	The war is over; your work for the Free Worlds is at an end. What you do next is up to you...`

@@ -2058,7 +2058,7 @@ mission "Marauder Hunted"
 	invisible
 	landing
 	repeat
-	destination Earth
+	destination Fitzroy
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Neutral"
 	to offer

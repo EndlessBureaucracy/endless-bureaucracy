@@ -1,6 +1,6 @@
 # endless-bureaucracy
 
-To install Endless Bureaucracy, run the script named install.
+To install Endless Bureaucracy, open a terminal, navigate to the endless-bureaucracy folder and enter './install.sh', then './endless-bureaucracy'
 
 Explore other star systems. Earn money by trading, carrying passengers, or completing missions. Use your earnings to buy a better ship or to upgrade the weapons and engines on your current one. Blow up pirates. Take sides in a civil war. Or leave human space behind and hope to find some friendly aliens whose culture is more civilized than your own...
 

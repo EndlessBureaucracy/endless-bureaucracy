@@ -1,6 +1,8 @@
 # endless-bureaucracy
 
-To install Endless Bureaucracy, open a terminal, navigate to the endless-bureaucracy folder and enter './install', then './endless-bureaucracy'
+To install Endless Bureaucracy on Windows, download endless-bureaucracy-win64-0.9.2.zip, extract it, then run EndlessSky.exe.
+
+To install Endless Bureaucracy on Linux, open a terminal, navigate to the endless-bureaucracy folder and enter './install'. To play it, enter './endless-bureaucracy'.
 
 Explore other star systems. Earn money by trading, carrying passengers, or completing missions. Use your earnings to buy a better ship or to upgrade the weapons and engines on your current one. Blow up pirates. Take sides in a civil war. Or leave human space behind and hope to find some friendly aliens whose culture is more civilized than your own...
 

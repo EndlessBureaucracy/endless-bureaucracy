@@ -1,5 +1,5 @@
 # endless-bureaucracy
-
+To find out more about Endless Bureaucracy, watch the pitch video at: [Pitch Video - Endless Bureaucracy](https://youtu.be/fYruMALHGaE)
 To install Endless Bureaucracy on Windows, download endless-bureaucracy-win64-0.9.2.zip, extract it, then run EndlessSky.exe.
 
 To install Endless Bureaucracy on OSX, visit [The OSX repository](https://github.com/EndlessBureaucracy/endless-bureaucracy-osx)

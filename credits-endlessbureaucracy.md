@@ -37,9 +37,8 @@ The price of public transport services is based on the proportion of the populat
 The price of child safety services is based on the per capita rate of substantiated child abuse cases recorded in the LGA Geographical Profiles. Higher rates of child abuse require more child safety services, reflected in higher prices.
 
 # Suburb description and image sources
-4 suburbs per LGA are featured in the game. The summary/description are all taken from Wikipedia, the images are 99% from Wikipedia. A few suburbs did not have high quality images in wikipedia, in these cases, Google image search was used with the 'Labelled for reuse' filter. 
+4 suburbs per LGA are featured in the game. The summary/description are all taken from Wikipedia, the images are 99% from Wikipedia. A few suburbs did not have high quality images in wikipedia, in these cases, Google image search was used with the 'Labelled for reuse' filter. One exception is the image for Tatyoon, which is taken from ararat local government website. 
 ![Labelled for reuse](search-filter.PNG)
-One exception is the image for Tatyoon, which is taken from ararat local government website. 
 
 The full list of wikipedia article and image source links by be found in this [spreadsheet](suburbs-v2.xlsx), the wikipedia scraping code documented [here](LGA Suburb data (doc).ipyn).
 
